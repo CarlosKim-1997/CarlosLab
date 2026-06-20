@@ -49,3 +49,17 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run sync:deploys           # 검사만
 npm run sync:deploys -- --deploy  # stale/missing 시 hook POST
 ```
+
+## Vercel 배포
+
+1. [Vercel](https://vercel.com) → **Add New Project** → `CarlosKim-1997/CarlosLab` import
+2. Framework: **Next.js** (자동 감지)
+3. Environment Variable: `NEXT_PUBLIC_SITE_URL` = 배포 URL (예: `https://carlos-lab.vercel.app`)
+4. Deploy
+
+CLI:
+
+```bash
+npx vercel login
+npx vercel --prod
+```

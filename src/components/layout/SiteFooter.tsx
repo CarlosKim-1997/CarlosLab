@@ -16,7 +16,7 @@ export function SiteFooter() {
             소개
           </Link>
           <a
-            href="https://github.com/CarlosKim-1997"
+            href="https://github.com/CarlosKim-1997/CarlosLab"
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-zinc-200"
