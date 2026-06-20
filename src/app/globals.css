@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@source "../components";
+@source "../demos";
+@source "../lib";
+@source "../content";
+@source "./**/*.{ts,tsx}";
+
+:root {
+  --background: #070b12;
+  --foreground: #e4e4e7;
+  --surface: #111827;
+  --accent: #22d3ee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgb(34 211 238 / 0.3);
+}

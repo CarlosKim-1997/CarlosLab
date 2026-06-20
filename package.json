@@ -1,0 +1,37 @@
+{
+  "name": "my-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "check:demo-links": "tsx scripts/check-demo-links.ts",
+    "create:project": "tsx scripts/create-project.ts",
+    "sync:deploys": "tsx scripts/sync-deploys.ts"
+  },
+  "dependencies": {
+    "next": "^15.3.3",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^22.15.32",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "^15.3.3",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.10",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
