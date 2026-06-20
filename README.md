@@ -1,6 +1,8 @@
-# My Website — Interactive Project Lab
+# Carlos Lab — Interactive Project Lab
 
-A Next.js portfolio where projects are structured objects with swappable demo runtimes.
+Next.js 포트폴리오. 프로젝트마다 iframe·영상·임베드 데모를 붙일 수 있는 구조입니다.
+
+**Repo**: https://github.com/CarlosKim-1997/CarlosLab
 
 ## Quick start
 
