@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Container } from "@/components/layout/Container";
 import { ProjectDemo } from "@/components/project/ProjectDemo";
+import { ProjectDemoNote } from "@/components/project/ProjectDemoNote";
 import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { ProjectHero } from "@/components/project/ProjectHero";
 import { ProjectMetaPanel } from "@/components/project/ProjectMetaPanel";
@@ -40,6 +41,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     <Container className="py-10 sm:py-14">
       <div className="mb-10 space-y-10">
         <ProjectHero project={project} />
+
+        {project.demoNote && <ProjectDemoNote note={project.demoNote} />}
 
         <ProjectDemo demo={project.demo} links={project.links} />
 

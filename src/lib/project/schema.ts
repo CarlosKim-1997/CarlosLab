@@ -97,6 +97,7 @@ export const projectMetaSchema = z.object({
   featured: z.boolean().optional(),
   priority: z.number().int(),
   deploy: projectDeploySchema,
+  demoNote: z.string().optional(),
 });
 
 export function parseProjectMeta(data: unknown) {

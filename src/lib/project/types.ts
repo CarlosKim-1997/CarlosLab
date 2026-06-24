@@ -93,6 +93,8 @@ export type ProjectMeta = {
   featured?: boolean;
   priority: number;
   deploy?: ProjectDeployConfig;
+  /** 웹 시연과 실제 아키텍처 차이 등, 데모 섹션 위에 표시할 안내 */
+  demoNote?: string;
 };
 
 export type Project = ProjectMeta & {

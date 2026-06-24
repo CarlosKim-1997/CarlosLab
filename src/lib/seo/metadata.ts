@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import type { ProjectMeta } from "@/lib/project/types";
 
-const SITE_NAME = "프로젝트 랩";
+const SITE_NAME = "Carlos Lab";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const DEFAULT_DESCRIPTION =
-  "브라우저에서 직접 체험하는 인터랙티브 프로젝트 뮤지엄.";
+  "개인 프로젝트 모음. 브라우저에서 바로 돌려 볼 수 있는 데모 포함.";
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),

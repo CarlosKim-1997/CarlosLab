@@ -18,7 +18,7 @@ export function SiteHeader() {
           href="/"
           className="font-mono text-sm font-semibold tracking-wider text-cyan-400 transition hover:text-cyan-300"
         >
-          프로젝트_랩
+          Carlos_Lab
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (

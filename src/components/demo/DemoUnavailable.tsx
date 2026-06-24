@@ -10,7 +10,7 @@ export function DemoUnavailable({ demo }: DemoUnavailableProps) {
       <p className="text-lg font-medium text-zinc-300">라이브 데모 없음</p>
       <p className="mt-2 max-w-md text-sm text-zinc-500">
         {demo.warning ??
-          "이 프로젝트는 스크린샷과 설명 위주로 제공됩니다. GitHub에서 실행할 수 있습니다."}
+          "웹 데모는 아직 없습니다. 아래 GitHub에서 코드를 볼 수 있습니다."}
       </p>
     </div>
   );

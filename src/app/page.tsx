@@ -19,19 +19,19 @@ export default function HomePage() {
       <section className="border-b border-white/10 py-16 sm:py-24">
         <Container>
           <p className="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-cyan-400">
-            개인 프로젝트 랩
+            Carlos Lab
           </p>
           <h1 className="mb-6 max-w-3xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
-            랩에 들어와서, 실험을 직접 만져보세요.
+            만든 것들을 모아 두고, 브라우저에서 바로 써 볼 수 있게.
           </h1>
           <p className="mb-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
-            이력서 템플릿이 아닙니다. 브라우저에서 바로 체험할 수 있는 빌드,
-            프로토타입, AI 실험을 모아 둔 인터랙티브 뮤지엄입니다.
+            Streamlit PoC, 데스크톱 앱, 모바일 앱, RAG 실험 등. README만
+            읽히는 게 아니라, 되는 것은 여기서 직접 돌려 봅니다.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button href="/projects">프로젝트 둘러보기</Button>
             <Button href="/about" variant="secondary">
-              랩 소개
+              소개
             </Button>
           </div>
         </Container>
@@ -41,7 +41,7 @@ export default function HomePage() {
         <Container className="space-y-6">
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-sm font-mono uppercase tracking-widest text-cyan-400">
-              추천 실험
+              추천
             </h2>
             <Link href="/projects" className="text-sm text-zinc-500 hover:text-zinc-300">
               전체 보기 →

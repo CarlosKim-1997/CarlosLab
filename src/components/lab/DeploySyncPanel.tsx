@@ -59,9 +59,8 @@ export function DeploySyncPanel() {
       <Card>
         <h2 className="mb-2 text-lg font-semibold text-zinc-100">데모 pre-warm</h2>
         <p className="mb-5 text-sm leading-relaxed text-zinc-400">
-          GitHub repo와 iframe 데모 URL을 검사합니다. 캐시가 없거나 repo가
-          업데이트된 프로젝트는 deploy hook으로 백그라운드 배포를 트리거할 수
-          있습니다. 프로젝트를 사이트에 추가한 뒤 여기서 한 번 눌러 주세요.
+          iframe 데모 URL과 GitHub 커밋을 비교합니다. 오래됐거나 배포가 없으면
+          deploy hook으로 다시 빌드할 수 있습니다.
         </p>
         <div className="flex flex-wrap gap-3">
           <Button

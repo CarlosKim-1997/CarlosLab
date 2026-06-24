@@ -2,30 +2,31 @@ import type { ProjectMeta } from "@/lib/project/types";
 
 const meta = {
   slug: "secure-hybrid-rag-enterprise-assistant",
-  title: "Secure Hybrid RAG Enterprise Assistant",
-  subtitle: "내부 문서는 로컬, 질문 분석만 외부 — 보안 하이브리드 RAG PoC.",
+  title: "Secure Hybrid RAG",
+  subtitle: "내규 문서 검색 — 질문만 외부로, 검색·답변은 로컬.",
   status: "active",
   kind: "ai",
   year: 2026,
   summary:
-    "사용자 질문만 외부 LLM으로 계획하고, FAISS 검색·답변 생성은 로컬 Ollama에서 처리하는 기업용 RAG 어시스턴트.",
+    "금융사 내규 질의용 RAG. 질문 분석만 OpenAI, FAISS 검색과 답변 생성은 로컬 Ollama에서 처리합니다.",
   problem:
-    "기업 내부 문서를 클라우드 LLM에 보내면 보안·컴플라이언스 리스크가 커집니다.",
+    "내부 문서 전체를 클라우드 LLM에 넘기면 보안 검토를 통과하기 어렵습니다.",
   solution:
-    "하이브리드 아키텍처: Query Planner(외부, 질문만) → Vector Search(로컬) → RAG Generator(로컬 Ollama).",
+    "3단계 파이프라인: 질문 분석 → 로컬 벡터 검색 → 로컬 LLM 답변. 문서 본문은 외부로 나가지 않습니다.",
   highlights: [
-    "내부 문서 외부 미전송",
+    "질문 텍스트만 외부 API 전송",
     "FAISS + SentenceTransformers",
-    "의도·출처 투명 표시",
+    "검색 근거·의도를 UI에 표시",
   ],
   stack: ["Python", "Streamlit", "FAISS", "Ollama", "OpenAI API"],
   links: {
     github: "https://github.com/CarlosKim-1997/Secure-Hybrid-RAG-Enterprise-Assistant",
   },
+  demoNote:
+    "원래 설계는 Step 3 답변을 로컬 Ollama에서 생성합니다. 이 사이트의 웹 시연(Streamlit Cloud)에서는 Ollama를 띄울 수 없어 Step 3만 클라우드 LLM으로 대체합니다. Step 1·2(질문 분석, FAISS 검색)는 동일합니다.",
   demo: {
     mode: "none",
-    warning:
-      "Streamlit Cloud 웹 데모 배포 예정. 프로덕션은 Step 3 로컬 Ollama, 웹 데모는 Step 3만 클라우드 LLM으로 체험합니다.",
+    warning: "Streamlit Cloud 배포 후 iframe으로 연결할 예정입니다.",
   },
   media: {
     cover: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.webp",

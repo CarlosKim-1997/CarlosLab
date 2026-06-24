@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata = buildPageMetadata(
   "소개",
-  "이 랩이 존재하는 이유와 프로젝트 구조를 설명합니다.",
+  "Carlos Lab — 개인 프로젝트 모음.",
 );
 
 export default function AboutPage() {
@@ -15,34 +15,31 @@ export default function AboutPage() {
           소개
         </p>
         <h1 className="mb-4 text-3xl font-bold text-zinc-50 sm:text-4xl">
-          랜딩 페이지가 아니라, 랩입니다
+          소개
         </h1>
         <p className="text-lg leading-relaxed text-zinc-400">
-          도구, AI 워크플로, 모바일 앱, RAG 실험 등 다양한 빌드를 만듭니다.
-          이 사이트는 흩어진 README 대신, 구조화되고 체험 가능한 형태로
-          프로젝트를 모아 둔 공간입니다.
+          여러 repo에 흩어져 있던 프로젝트를 한곳에 모았습니다. 설명과 데모를
+          같이 두고, 되는 것은 브라우저에서 바로 실행합니다.
         </p>
       </header>
 
       <div className="max-w-2xl space-y-6 text-zinc-400">
         <section>
-          <h2 className="mb-2 text-lg font-semibold text-zinc-200">원칙</h2>
+          <h2 className="mb-2 text-lg font-semibold text-zinc-200">구조</h2>
           <ul className="list-disc space-y-2 pl-6">
-            <li>콘텐츠는 UI 안에 묻히지 않는다.</li>
-            <li>데모 런타임은 포트폴리오 런타임과 분리한다.</li>
-            <li>모든 프로젝트는 metadata + MDX로 표현한다.</li>
+            <li>프로젝트마다 meta.ts + MDX로 정리</li>
+            <li>데모는 iframe·영상·임베드로 분리</li>
+            <li>라이브 데모가 없으면 GitHub·영상으로 대체</li>
           </ul>
         </section>
 
         <section>
-          <h2 className="mb-2 text-lg font-semibold text-zinc-200">여기서 볼 수 있는 것</h2>
+          <h2 className="mb-2 text-lg font-semibold text-zinc-200">시작하기</h2>
           <p>
-            가능하면 라이브 데모, 어려우면 영상·GitHub 링크, 더 깊게는 기술
-            노트.{" "}
             <Link href="/projects" className="text-cyan-400 hover:text-cyan-300">
               프로젝트
             </Link>
-            부터 먼저 체험해 보세요.
+            목록에서 데모가 있는 것부터 보면 됩니다.
           </p>
         </section>
       </div>
