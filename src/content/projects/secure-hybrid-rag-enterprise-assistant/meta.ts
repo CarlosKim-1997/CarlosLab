@@ -21,12 +21,16 @@ const meta = {
   stack: ["Python", "Streamlit", "FAISS", "Ollama", "OpenAI API"],
   links: {
     github: "https://github.com/CarlosKim-1997/Secure-Hybrid-RAG-Enterprise-Assistant",
+    demo: "https://secure-hybrid-rag-enterprise-assistant.streamlit.app/",
   },
   demoNote:
     "원래 설계는 Step 3 답변을 로컬 Ollama에서 생성합니다. 이 사이트의 웹 시연(Streamlit Cloud)에서는 Ollama를 띄울 수 없어 Step 3만 클라우드 LLM으로 대체합니다. Step 1·2(질문 분석, FAISS 검색)는 동일합니다.",
   demo: {
-    mode: "none",
-    warning: "Streamlit Cloud 배포 후 iframe으로 연결할 예정입니다.",
+    mode: "iframe",
+    url: "https://secure-hybrid-rag-enterprise-assistant.streamlit.app/",
+    aspectRatio: "16/9",
+    warning:
+      "웹 시연 모드(WEB_DEMO_MODE)입니다. Streamlit Cloud에서 앱을 Public으로 두어야 iframe이 열립니다. 첫 로드는 30초쯤 걸릴 수 있습니다.",
   },
   media: {
     cover: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.webp",
