@@ -27,9 +27,9 @@ const meta = {
     warning: "데스크톱 앱이라 웹 데모는 아직 없습니다. GitHub에서 빌드할 수 있습니다.",
   },
   media: {
-    cover: "/media/projects/calmmail/cover.webp",
-    og: "/media/projects/calmmail/og.webp",
-    screenshots: ["/media/projects/calmmail/screenshot-01.webp"],
+    cover: "/media/projects/calmmail/cover.png",
+    og: "/media/projects/calmmail/cover.png",
+    screenshots: ["/media/projects/calmmail/cover.png"],
   },
   visibility: "public",
   featured: true,

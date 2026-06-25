@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
+import { ProjectCoverImage } from "@/components/project/ProjectCoverImage";
 import { isPlayableDemo } from "@/lib/demo/demoModes";
 import { projectKindLabels, projectStatusLabels } from "@/lib/i18n/labels";
 import type { ProjectMeta } from "@/lib/project/types";
@@ -10,20 +11,6 @@ type ProjectCardProps = {
   featured?: boolean;
 };
 
-function CoverPlaceholder({ slug, title }: { slug: string; title: string }) {
-  const hue = slug.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % 360;
-
-  return (
-    <div
-      className="flex h-full w-full items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800"
-      style={{
-        backgroundImage: `linear-gradient(135deg, hsl(${hue}, 40%, 15%), hsl(${(hue + 60) % 360}, 50%, 25%))`,
-      }}
-      aria-label={`${title} 커버`}
-    />
-  );
-}
-
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   const playable = isPlayableDemo(project.demo);
 
@@ -31,7 +18,10 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
     <Link href={`/projects/${project.slug}`} className="group block h-full">
       <Card hover className={`flex h-full flex-col ${featured ? "ring-1 ring-cyan-500/30" : ""}`}>
         <div className="relative mb-4 aspect-video overflow-hidden rounded-lg border border-white/5">
-          <CoverPlaceholder slug={project.slug} title={project.title} />
+          <ProjectCoverImage
+            src={project.media.cover}
+            alt={`${project.title} 썸네일`}
+          />
           {featured && (
             <span className="absolute left-3 top-3 rounded-full bg-cyan-500/90 px-2 py-0.5 text-xs font-semibold text-zinc-950">
               추천

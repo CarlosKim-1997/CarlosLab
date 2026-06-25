@@ -33,10 +33,10 @@ const meta = {
       "웹 시연 모드입니다. Streamlit Cloud 데모라 첫 로드·유휴 후 재접속 시 30초쯤 걸릴 수 있습니다.",
   },
   media: {
-    cover: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.webp",
-    og: "/media/projects/secure-hybrid-rag-enterprise-assistant/og.webp",
+    cover: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.png",
+    og: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.png",
     screenshots: [
-      "/media/projects/secure-hybrid-rag-enterprise-assistant/screenshot-01.webp",
+      "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.png",
     ],
   },
   visibility: "public",

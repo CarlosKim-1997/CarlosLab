@@ -1,25 +1,11 @@
 import { Badge } from "@/components/ui/Badge";
+import { ProjectCoverImage } from "@/components/project/ProjectCoverImage";
 import { projectKindLabels, projectStatusLabels } from "@/lib/i18n/labels";
 import type { ProjectMeta } from "@/lib/project/types";
 
 type ProjectHeroProps = {
   project: ProjectMeta;
 };
-
-function CoverPlaceholder({ slug, title }: { slug: string; title: string }) {
-  const hue = slug.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % 360;
-
-  return (
-    <div
-      className="aspect-video w-full overflow-hidden rounded-xl border border-white/10 lg:aspect-[16/10]"
-      style={{
-        backgroundImage: `linear-gradient(135deg, hsl(${hue}, 40%, 12%), hsl(${(hue + 80) % 360}, 45%, 22%))`,
-      }}
-      role="img"
-      aria-label={`${title} 커버`}
-    />
-  );
-}
 
 export function ProjectHero({ project }: ProjectHeroProps) {
   return (
@@ -36,7 +22,13 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         </h1>
         <p className="text-lg text-zinc-400">{project.subtitle}</p>
       </div>
-      <CoverPlaceholder slug={project.slug} title={project.title} />
+      <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-white/10 lg:aspect-[16/10]">
+        <ProjectCoverImage
+          src={project.media.cover}
+          alt={`${project.title} 썸네일`}
+          priority
+        />
+      </div>
     </header>
   );
 }
