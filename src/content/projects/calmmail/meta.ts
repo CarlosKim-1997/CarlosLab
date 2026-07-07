@@ -21,10 +21,13 @@ const meta = {
   stack: ["Electron", "React", "TypeScript", "SQLite", "Gmail API"],
   links: {
     github: "https://github.com/CarlosKim-1997/CalmMail",
+    download:
+      "https://github.com/CarlosKim-1997/CalmMail/releases/latest/download/CalmMail-Setup-Windows-x64.exe",
   },
   demo: {
     mode: "none",
-    warning: "데스크톱 앱이라 웹 데모는 아직 없습니다. GitHub에서 빌드할 수 있습니다.",
+    warning:
+      "v0.1.0 Windows 설치 파일입니다. 새 버전은 GitHub Releases에서 받을 수 있습니다.",
   },
   media: {
     cover: "/media/projects/calmmail/cover.png",

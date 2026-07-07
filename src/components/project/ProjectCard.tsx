@@ -55,7 +55,11 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         </div>
 
         <span className="text-sm font-medium text-cyan-400 group-hover:text-cyan-300">
-          {playable ? "체험하기 →" : "자세히 보기 →"}
+          {playable
+            ? "체험하기 →"
+            : project.links.download
+              ? "다운로드 →"
+              : "자세히 보기 →"}
         </span>
       </Card>
     </Link>

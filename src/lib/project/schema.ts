@@ -55,6 +55,7 @@ export const projectDemoSchema = z.discriminatedUnion("mode", [
 export const projectLinksSchema = z.object({
   github: z.string().url().optional(),
   demo: z.string().url().optional(),
+  download: z.string().url().optional(),
   article: z.string().url().optional(),
   video: z.string().url().optional(),
 });

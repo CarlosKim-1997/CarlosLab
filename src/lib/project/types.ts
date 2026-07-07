@@ -53,6 +53,7 @@ export type ProjectDemo =
 export type ProjectLinks = {
   github?: string;
   demo?: string;
+  download?: string;
   article?: string;
   video?: string;
 };
