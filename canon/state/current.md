@@ -1,6 +1,6 @@
 ---
 schema: state/v1
-status: READY
+status: IN_PROGRESS
 areas:
   - global
 ---
@@ -8,39 +8,32 @@ areas:
 
 ## Current Position
 
-Thinking Map v1 is merged into `main` at `b6149024ce6f456a56c9abb6d8469e3defb35d03`.
+Thinking Map v1 is integrated on `main`.
 
-The monthly pipeline architecture is designed. The human owner ratified D-003 (hybrid local-first runtime boundary) and D-004 (bounded/redacted semantic-analysis privacy mode) on 2026-09-25. OQ-001 and OQ-002 are resolved.
+The dedicated private `thinking-map-pipeline` repository now exists and has progressed through its integrated no-mutation monthly orchestration dry-run. CarlosLab remains the public publication authority.
 
-T-003 should implement the deterministic pipeline core in a dedicated private repository. No LLM semantic analyzer is part of T-003.
+T-003 is upgrading the public `/ideas` experience from a report-like Thinking Map into a visual atlas on `feat/thinking-map-visual-atlas-v2`.
 
 ## Active Work
 
-No implementation Task is active inside CarlosLab.
-
-Next planned Task:
-- T-003 — Deterministic Pipeline Core, to live in the dedicated private pipeline repository.
-
-External prerequisite:
-- create the dedicated private GitHub repository for the pipeline.
+- T-003 — Thinking Map visual atlas v2.
 
 ## Blockers
 
-The currently connected GitHub repository API can mutate existing repositories but does not expose repository creation. Therefore the private pipeline repository must be created through another authorized GitHub surface before T-003 code can begin there.
+No known implementation blocker.
 
-This is an environment/tooling blocker only; product/runtime decisions are resolved.
+Monthly production automation remains an upstream/private-pipeline concern and is not required for this UI Task.
 
 ## Material Risks
 
-- Do not place private pipeline implementation or raw processing state in public CarlosLab as a workaround.
-- Raw export ZIP, full normalized transcripts, and raw prompts remain local-only under D-003.
-- Semantic cloud calls remain outside T-003 and must later obey D-004.
-- CarlosLab remains publication authority for public Thinking Map state.
+- turning frequency into an apparent quality ranking;
+- making lineage graphics imply causality stronger than the archived relationship supports;
+- sacrificing mobile/readable text for visual novelty;
+- adding a chart dependency that increases bundle/runtime cost unnecessarily;
+- exposing private provenance while trying to make relationships richer.
 
 ## Verification Basis
 
-Thinking Map v1 merge: `b6149024ce6f456a56c9abb6d8469e3defb35d03`.
+Thinking Map v1 already validates 202 public entries, nine domains, nine lineages, public schema integrity, and private-provenance deny checks.
 
-Monthly design branch passed Governance, public-data validation, and application build in PR run #29 before ratification changes.
-
-D-003 and D-004 reflect explicit human approval in the current session on 2026-09-25.
+T-003 will preserve that data contract and add presentation-only derivations.
