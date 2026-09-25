@@ -1,0 +1,40 @@
+name: Verify Thinking Map
+
+on:
+  push:
+    branches:
+      - main
+      - feat/thinking-map-v1
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Check Repository Governance structure
+        run: node tooling/governance/check.mjs
+
+  application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Validate Thinking Map public dataset
+        run: npm run validate:thinking
+      - name: Build production app
+        run: npm run build
