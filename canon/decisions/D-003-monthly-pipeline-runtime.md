@@ -1,7 +1,7 @@
 ---
 schema: decision/v1
 id: D-003
-status: PROPOSED
+status: ACTIVE
 areas:
   - thinking-map
 related_to:
@@ -20,7 +20,7 @@ Adopt a hybrid local-first runtime for the monthly Thinking Map pipeline:
 - keep public publication output limited to the sanitized CarlosLab projection and human-reviewed pull requests;
 - allow compact private processing state to be stored in the private repository only when it can be reconstructed without storing full conversation text.
 
-This Decision is PROPOSED and has no normative effect until explicitly ratified by the human owner and canonically activated.
+The human owner explicitly ratified this Decision on 2026-09-25.
 
 ## Context
 
@@ -47,10 +47,9 @@ The public CarlosLab repository remains a publication target, not a processing e
 
 ## Consequences
 
-If activated:
-- the first implementation should create a dedicated private pipeline repository;
-- raw export paths must point outside tracked repository content;
-- repository ignore rules and validation must reject raw export/transcript artifacts;
-- cloud LLM use remains a separate privacy decision under OQ-002;
+- the first implementation must use a dedicated private pipeline repository;
+- raw export paths point outside tracked repository content;
+- repository ignore rules and validation reject raw export/transcript artifacts;
+- cloud-model handling follows D-004;
 - loss of local raw input must not corrupt published public state;
 - public CarlosLab remains authoritative for what has actually been published.

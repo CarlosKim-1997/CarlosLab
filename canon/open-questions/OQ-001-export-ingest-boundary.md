@@ -1,11 +1,10 @@
 ---
 schema: open-question/v1
 id: OQ-001
-status: OPEN
+status: RESOLVED
 areas:
   - thinking-map
-depends_on:
-  - D-002
+resolved_by: D-003
 ---
 # Where should monthly ChatGPT export ingest run?
 
@@ -15,4 +14,4 @@ Should the monthly raw-export ingestion and processed-conversation state live in
 
 ## Why It Matters
 
-The choice affects secret handling, reproducibility, automation convenience, and the attack surface around raw personal conversation data. It does not block the public Thinking Map v1 UI.
+The choice affects secret handling, reproducibility, automation convenience, and the attack surface around raw personal conversation data. D-003 resolves this with a hybrid local-first boundary: durable software and compact non-raw state in a private repository, raw export/transcript data local-only.
