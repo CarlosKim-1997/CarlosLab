@@ -39,6 +39,12 @@ export function SiteHeader() {
             프로젝트
           </Link>
           <Link
+            href="/ideas"
+            className="text-sm text-zinc-400 transition hover:text-zinc-100"
+          >
+            아이디어
+          </Link>
+          <Link
             href="/about"
             className="text-sm text-zinc-400 transition hover:text-zinc-100"
           >

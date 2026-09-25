@@ -1,4 +1,7 @@
 import { ArchiveExplorer } from "@/components/thinking/ArchiveExplorer";
+import { LineageMap } from "@/components/thinking/LineageMap";
+import { ThinkingLandscape } from "@/components/thinking/ThinkingLandscape";
+import { ThinkingTimeline } from "@/components/thinking/ThinkingTimeline";
 import { Container } from "@/components/layout/Container";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getEntryMap, getThinkingMap } from "@/lib/thinking/getThinkingMap";
@@ -27,10 +30,6 @@ function topDomainsForYear(
 export default function IdeasPage() {
   const thinking = getThinkingMap();
   const entryMap = getEntryMap(thinking.entries);
-  const domains = Object.entries(thinking.stats.domainCounts).sort(
-    (a, b) => b[1] - a[1],
-  );
-  const maxDomainCount = Math.max(...domains.map(([, count]) => count));
   const featuredPatterns = thinking.patterns.filter((pattern) => pattern.featured);
   const years = ["2025", "2026"].map((year) => ({
     year,
@@ -128,22 +127,10 @@ export default function IdeasPage() {
             </p>
           </div>
 
-          <div className="grid gap-x-10 gap-y-4 lg:grid-cols-2">
-            {domains.map(([domain, count]) => (
-              <div key={domain}>
-                <div className="mb-2 flex items-center justify-between gap-4 text-sm">
-                  <span className="text-zinc-300">{domain}</span>
-                  <span className="font-mono text-zinc-600">{count}</span>
-                </div>
-                <div className="h-2 overflow-hidden rounded-full bg-white/5">
-                  <div
-                    className="h-full rounded-full bg-cyan-400/70"
-                    style={{ width: `${(count / maxDomainCount) * 100}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <ThinkingLandscape
+            domainCounts={thinking.stats.domainCounts}
+            total={thinking.stats.entryCount}
+          />
         </Container>
       </section>
 
@@ -162,7 +149,9 @@ export default function IdeasPage() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <LineageMap entries={thinking.entries} lineages={thinking.lineages} />
+
+          <div className="mt-6 space-y-4">
             {thinking.lineages.map((lineage, index) => {
               const examples = lineage.entryIds
                 .map((id) => entryMap.get(id))
@@ -223,7 +212,9 @@ export default function IdeasPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <ThinkingTimeline entries={thinking.entries} />
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
             {years.map(({ year, count, topDomains }) => (
               <article
                 key={year}
