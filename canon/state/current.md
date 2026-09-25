@@ -8,52 +8,39 @@ areas:
 
 ## Current Position
 
-Thinking Map v1 baseline implementation is complete and verified on `feat/thinking-map-v1`.
+Thinking Map v1 is merged into `main` at `b6149024ce6f456a56c9abb6d8469e3defb35d03`.
 
-The public `/ideas` experience now presents the approved progressive-disclosure structure: framing, recurring patterns, domain landscape, thought lineages, limited time comparison, and the full sanitized 202-entry evidence archive.
+The monthly pipeline architecture is designed. The human owner ratified D-003 (hybrid local-first runtime boundary) and D-004 (bounded/redacted semantic-analysis privacy mode) on 2026-09-25. OQ-001 and OQ-002 are resolved.
 
-Repository Governance is installed and structurally valid. T-001 is complete. Draft PR #1 is ready to transition to human review, but merge remains a separate human-authorized action.
+T-003 should implement the deterministic pipeline core in a dedicated private repository. No LLM semantic analyzer is part of T-003.
 
 ## Active Work
 
-No mutating implementation Task is currently active.
+No implementation Task is active inside CarlosLab.
 
-Completed:
-- T-001 — Implement Thinking Map v1 baseline.
+Next planned Task:
+- T-003 — Deterministic Pipeline Core, to live in the dedicated private pipeline repository.
 
-Review target:
-- PR #1 — Thinking Map v1 + recoverable agent handoff.
-
-Future work is intentionally not active:
-- monthly private ingest and incremental analyzer,
-- automated snapshot/delta PR generation,
-- OQ-001 resolution.
+External prerequisite:
+- create the dedicated private GitHub repository for the pipeline.
 
 ## Blockers
 
-No implementation blocker remains for T-001.
+The currently connected GitHub repository API can mutate existing repositories but does not expose repository creation. Therefore the private pipeline repository must be created through another authorized GitHub surface before T-003 code can begin there.
 
-A current hosted Vercel preview is unavailable because repeated branch commits hit the Vercel build-rate limit. This is an external preview limitation, not a production-build failure. GitHub Actions production build verification passed.
-
-Integration into `main` is intentionally blocked on human PR review/merge authorization.
+This is an environment/tooling blocker only; product/runtime decisions are resolved.
 
 ## Material Risks
 
-- Raw ChatGPT provenance or sensitive conversation-derived material must never enter the public repository (C-001).
-- Monthly semantic generation must not bypass human publication review (C-002).
-- Future agents must not treat T-001 completion as authority to merge PR #1 or to decide OQ-001.
-- The public ontology should not drift silently during monthly updates.
+- Do not place private pipeline implementation or raw processing state in public CarlosLab as a workaround.
+- Raw export ZIP, full normalized transcripts, and raw prompts remain local-only under D-003.
+- Semantic cloud calls remain outside T-003 and must later obey D-004.
+- CarlosLab remains publication authority for public Thinking Map state.
 
 ## Verification Basis
 
-Repository baseline before the work: `main` at `0c3ef5e19ff086eca449326d7d634a3970abb471`.
+Thinking Map v1 merge: `b6149024ce6f456a56c9abb6d8469e3defb35d03`.
 
-Implementation commit verified before this State update:
-`c833bdea73d6a02826d12f1a3ca1dc4e57aef99e`.
+Monthly design branch passed Governance, public-data validation, and application build in PR run #29 before ratification changes.
 
-GitHub Actions PR run #25 completed successfully on 2026-09-25:
-- Repository Governance structural checker: PASS.
-- Thinking Map public dataset/schema/privacy validator: PASS for all 202 entries.
-- Next.js production build: PASS.
-
-A branch diff review found no raw export archive, conversation transcript, conversation ID map, or private source-session map among changed paths. The public validator also rejects known private provenance fields.
+D-003 and D-004 reflect explicit human approval in the current session on 2026-09-25.
