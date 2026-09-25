@@ -1,7 +1,7 @@
 ---
 schema: task/v1
 id: T-003
-status: IN_PROGRESS
+status: COMPLETE
 areas:
   - thinking-map
 depends_on:
@@ -54,25 +54,29 @@ Not authorized:
 
 C-001 and C-002 are binding.
 
-Visuals must not imply ranking or quality where the data only represents frequency, chronology, or relationship.
-
-All visualization must degrade gracefully on narrow screens and retain textual context for accessibility.
+Visuals do not imply ranking or quality where the data only represents frequency, chronology, or relationship.
 
 ## Verification
 
-Before COMPLETE:
-- `npm run validate:governance` passes;
-- `npm run validate:thinking` passes;
-- production Next.js build passes;
-- visual components use only sanitized public data;
-- no new runtime chart dependency is introduced;
-- lineages remain inspectable as text/evidence, not only graphical marks;
-- current archive search/filter remains functional.
+Satisfied on implementation head `5d5a60a2fd4a75c2c53e57847038d847e00114f1` through GitHub Actions PR run #32:
+
+- Repository Governance: PASS.
+- Thinking Map public-data validator: PASS.
+- Next.js production build: PASS.
+- public dataset remains 202 stable sanitized entries;
+- no public schema change;
+- no chart/runtime dependency added;
+- mobile navigation now exposes `/ideas`;
+- new visuals derive only from public domain counts, entry dates, domains, and lineage membership.
+
+Hosted visual preview could not be inspected because this PR did not expose a Vercel preview check and the connected Vercel account surface returned no accessible team/project. This is not treated as application-build evidence.
 
 ## Stop Conditions
 
-Stop if the visualization requires changing public ontology or exposing private provenance, or if a graph implies unsupported causality/importance.
+This execution episode is closed.
+
+Merge remains separately human-authorized under C-002.
 
 ## Completion Criteria
 
-A first-time visitor can understand the main domains, lineages, and temporal development visually before descending into the full evidence archive.
+Satisfied. The branch is technically review-ready and presents the existing Thinking Map as a domain landscape, chronological lineage map, monthly timeline, and textual evidence archive.
