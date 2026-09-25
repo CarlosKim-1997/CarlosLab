@@ -30,6 +30,9 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Button href="/projects">프로젝트 둘러보기</Button>
+            <Button href="/ideas" variant="secondary">
+              사고 지도
+            </Button>
             <Button href="/about" variant="secondary">
               소개
             </Button>
