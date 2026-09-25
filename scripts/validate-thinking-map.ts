@@ -51,8 +51,8 @@ const forbiddenPublicTokens = [
   "conversation_id",
   "conversationId",
   "source_indices",
-  "source_sessions",
-  "sourceSessions",
+  "\"source_sessions\":",
+  "\"sourceSessions\":",
   "\"sources\":",
 ];
 
