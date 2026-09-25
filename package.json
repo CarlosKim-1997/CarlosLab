@@ -12,7 +12,9 @@
     "validate:thinking": "tsx scripts/validate-thinking-map.ts",
     "check:demo-links": "tsx scripts/check-demo-links.ts",
     "create:project": "tsx scripts/create-project.ts",
-    "sync:deploys": "tsx scripts/sync-deploys.ts"
+    "sync:deploys": "tsx scripts/sync-deploys.ts",
+    "validate:governance": "node tooling/governance/check.mjs",
+    "verify:thinking-map": "npm run validate:governance && npm run validate:thinking && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",
