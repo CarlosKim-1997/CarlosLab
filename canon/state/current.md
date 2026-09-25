@@ -8,50 +8,56 @@ areas:
 
 ## Current Position
 
-Thinking Map v1 is integrated on `main`.
+Thinking Map visual atlas v2 is integrated on `main`.
 
-The dedicated private `thinking-map-pipeline` repository now exists and has progressed through an integrated no-mutation monthly orchestration dry-run. CarlosLab remains the public publication authority.
+PR #3 was merged as:
+`798cc7586f00b3611c572d54875afd2a1454bd48`.
 
-T-003 Thinking Map visual atlas v2 is complete on `feat/thinking-map-visual-atlas-v2`.
-
-The branch upgrades `/ideas` with:
+The public `/ideas` experience now includes:
 - domain landscape visualization;
 - chronological lineage map;
 - monthly first-seen activity timeline;
 - preserved textual lineage/evidence layers;
+- searchable/filterable 202-entry public archive;
 - mobile navigation access.
+
+The dedicated private `thinking-map-pipeline` repository remains the upstream analysis/orchestration layer. CarlosLab remains the public publication authority.
 
 ## Active Work
 
 No mutating implementation Task is active.
 
-Review target:
-- PR #3 — Thinking Map visual atlas v2.
+Completed:
+- T-001 — Thinking Map v1 baseline
+- T-002 — monthly pipeline architecture design
+- T-003 — Thinking Map visual atlas v2
 
 ## Blockers
 
-No technical blocker remains for T-003.
+No repository blocker remains for T-003.
 
-Hosted Vercel visual preview was not available through the connected tool surface, so final aesthetic review is pending human inspection or a later accessible preview.
-
-Merge remains explicitly human-gated by C-002.
+Hosted Vercel visual inspection is still unavailable through the current connected Vercel surface. Production deployment status should therefore be treated as external until independently observed.
 
 ## Material Risks
 
 - frequency visuals can be mistaken for quality ranking if explanatory text is removed later;
 - lineage chronology must not be reinterpreted as strict causality;
-- future snapshot data may require revisiting timeline density;
-- automated monthly publication must continue to update only sanitized public projection data.
+- future monthly snapshots may require revisiting timeline density;
+- automated updates must continue to publish sanitized projection data only;
+- C-002 human publication gate remains binding for future semantic updates.
 
 ## Verification Basis
 
-Implementation head:
-`5d5a60a2fd4a75c2c53e57847038d847e00114f1`.
+T-003 final branch head:
+`fd9adcaa7090b25c017c75d0b4e0a46f598cc66f`.
 
-GitHub Actions PR run #32 passed:
+GitHub Actions PR run #33 passed:
 - Repository Governance;
 - Thinking Map public dataset validation;
 - Next.js production build.
+
+PR #3 merged as:
+`798cc7586f00b3611c572d54875afd2a1454bd48`.
 
 See:
 `work/reports/t-003-thinking-map-visual-atlas-v2.md`.
