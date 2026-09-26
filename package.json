@@ -17,6 +17,7 @@
     "verify:thinking-map": "npm run validate:governance && npm run validate:thinking && npm run build"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "^15.3.3",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.1.0",
