@@ -1,6 +1,6 @@
 ---
 schema: state/v1
-status: READY
+status: IN_PROGRESS
 areas:
   - global
 ---
@@ -9,6 +9,8 @@ areas:
 ## Current Position
 
 Thinking Map visual atlas v2, mobile usability v3, and CI noise reduction are integrated on `main`.
+
+T-006 opens an observation-only AI Readability Baseline v0. The public portfolio content, crawl policy, and information architecture are intentionally held constant while page-view/referrer instrumentation and privacy-minimized crawler request classification establish the measurement layer.
 
 Recent merges:
 - PR #4 — Thinking Map mobile usability v3
@@ -39,7 +41,7 @@ The dedicated private `thinking-map-pipeline` repository remains the upstream an
 
 ## Active Work
 
-No mutating implementation Task is active.
+T-006 — AI Readability Baseline v0 is active. Its 14-day observation window begins only after the instrumentation is verified on production.
 
 Completed:
 - T-001 — Thinking Map v1 baseline
@@ -58,6 +60,7 @@ No repository blocker remains.
 - future longer monthly history may require timeline grouping/zoom;
 - explanatory text should remain so frequency is not interpreted as quality;
 - C-002 human publication gate remains binding for future semantic updates;
+- baseline instrumentation must remain observation-only until the 14-day review, with no AI-readability semantic intervention;
 - Node 20 GitHub Actions deprecation remains a future maintenance item but is not currently causing failures.
 
 ## Verification Basis
