@@ -1,6 +1,6 @@
 ---
 schema: state/v1
-status: READY
+status: IN_PROGRESS
 areas:
   - global
 ---
@@ -10,54 +10,27 @@ areas:
 
 Thinking Map visual atlas v2 is integrated on `main`.
 
-PR #3 was merged as:
-`798cc7586f00b3611c572d54875afd2a1454bd48`.
+T-004 is improving mobile readability and interaction cost on `feat/thinking-map-mobile-usability-v3`.
 
-The public `/ideas` experience now includes:
-- domain landscape visualization;
-- chronological lineage map;
-- monthly first-seen activity timeline;
-- preserved textual lineage/evidence layers;
-- searchable/filterable 202-entry public archive;
-- mobile navigation access.
-
-The dedicated private `thinking-map-pipeline` repository remains the upstream analysis/orchestration layer. CarlosLab remains the public publication authority.
+The public data contract remains unchanged.
 
 ## Active Work
 
-No mutating implementation Task is active.
-
-Completed:
-- T-001 — Thinking Map v1 baseline
-- T-002 — monthly pipeline architecture design
-- T-003 — Thinking Map visual atlas v2
+- T-004 — Thinking Map mobile usability v3.
 
 ## Blockers
 
-No repository blocker remains for T-003.
-
-Hosted Vercel visual inspection is still unavailable through the current connected Vercel surface. Production deployment status should therefore be treated as external until independently observed.
+No known implementation blocker.
 
 ## Material Risks
 
-- frequency visuals can be mistaken for quality ranking if explanatory text is removed later;
-- lineage chronology must not be reinterpreted as strict causality;
-- future monthly snapshots may require revisiting timeline density;
-- automated updates must continue to publish sanitized projection data only;
-- C-002 human publication gate remains binding for future semantic updates.
+- over-compressing lineage chronology on narrow screens;
+- adding labels that visually overstate recent activity;
+- using interaction patterns that hide evidence too aggressively;
+- accidentally turning presentation work into a schema change.
 
 ## Verification Basis
 
-T-003 final branch head:
-`fd9adcaa7090b25c017c75d0b4e0a46f598cc66f`.
+Production `/ideas` is reachable on Vercel and the v2 visual components are present.
 
-GitHub Actions PR run #33 passed:
-- Repository Governance;
-- Thinking Map public dataset validation;
-- Next.js production build.
-
-PR #3 merged as:
-`798cc7586f00b3611c572d54875afd2a1454bd48`.
-
-See:
-`work/reports/t-003-thinking-map-visual-atlas-v2.md`.
+T-004 is presentation-only and must preserve the existing 202-entry public projection.
