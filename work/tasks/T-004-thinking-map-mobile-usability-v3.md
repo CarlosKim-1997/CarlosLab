@@ -66,6 +66,10 @@ Before COMPLETE:
 - recent/peak counts are directly visible;
 - lineage details are collapsible with native `details/summary`.
 
+## Stop Conditions
+
+Stop if mobile readability improvements require changing the public ontology/schema, exposing private provenance, adding a chart/runtime dependency, or hiding evidence behind client-only interaction.
+
 ## Completion Criteria
 
 The first mobile viewport shows readable lineage identity and chronology without sacrificing a quarter of the viewport to a fixed label column, and the timeline communicates both scale and horizontal interaction more clearly.
