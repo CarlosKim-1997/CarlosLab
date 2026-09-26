@@ -10,54 +10,43 @@ areas:
 
 Thinking Map visual atlas v2 is integrated on `main`.
 
-PR #3 was merged as:
-`798cc7586f00b3611c572d54875afd2a1454bd48`.
+T-004 Thinking Map mobile usability v3 is complete on `feat/thinking-map-mobile-usability-v3`.
 
-The public `/ideas` experience now includes:
-- domain landscape visualization;
-- chronological lineage map;
-- monthly first-seen activity timeline;
-- preserved textual lineage/evidence layers;
-- searchable/filterable 202-entry public archive;
-- mobile navigation access.
+The branch improves:
+- mobile lineage readability;
+- timeline scroll discoverability;
+- recent/peak timeline count readability;
+- lineage detail density.
 
-The dedicated private `thinking-map-pipeline` repository remains the upstream analysis/orchestration layer. CarlosLab remains the public publication authority.
+The public Thinking Map schema and 202-entry archive are unchanged.
 
 ## Active Work
 
 No mutating implementation Task is active.
 
-Completed:
-- T-001 — Thinking Map v1 baseline
-- T-002 — monthly pipeline architecture design
-- T-003 — Thinking Map visual atlas v2
+Review target:
+- PR #4 — Thinking Map mobile usability v3.
 
 ## Blockers
 
-No repository blocker remains for T-003.
+No technical blocker remains for T-004.
 
-Hosted Vercel visual inspection is still unavailable through the current connected Vercel surface. Production deployment status should therefore be treated as external until independently observed.
+Merge remains human-gated by C-002.
 
 ## Material Risks
 
-- frequency visuals can be mistaken for quality ranking if explanatory text is removed later;
-- lineage chronology must not be reinterpreted as strict causality;
-- future monthly snapshots may require revisiting timeline density;
-- automated updates must continue to publish sanitized projection data only;
-- C-002 human publication gate remains binding for future semantic updates.
+- future lineage growth may make compact mobile rails too dense;
+- future longer monthly history may require timeline grouping/zoom;
+- explanatory text should remain so frequency is not interpreted as quality.
 
 ## Verification Basis
 
-T-003 final branch head:
-`fd9adcaa7090b25c017c75d0b4e0a46f598cc66f`.
-
-GitHub Actions PR run #33 passed:
+GitHub Actions PR run #37 passed:
 - Repository Governance;
-- Thinking Map public dataset validation;
+- public Thinking Map validation;
 - Next.js production build.
 
-PR #3 merged as:
-`798cc7586f00b3611c572d54875afd2a1454bd48`.
+Vercel preview for the UI implementation commit is READY and `/ideas` returns HTTP 200 with the new responsive presentation markers.
 
 See:
-`work/reports/t-003-thinking-map-visual-atlas-v2.md`.
+`work/reports/t-004-thinking-map-mobile-usability-v3.md`.
