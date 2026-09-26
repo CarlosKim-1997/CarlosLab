@@ -4,11 +4,14 @@ on:
   push:
     branches:
       - main
-      - feat/thinking-map-v1
   pull_request:
     branches:
       - main
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read

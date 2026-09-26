@@ -1,0 +1,65 @@
+---
+schema: task/v1
+id: T-005
+status: COMPLETE
+areas:
+  - global
+depends_on:
+  - T-004
+---
+# CI noise reduction
+
+## Objective
+
+Reduce duplicate GitHub Actions runs and notification noise without weakening repository verification.
+
+## Scope
+
+In scope:
+- run CI on pull requests targeting `main`;
+- run final verification on pushes to `main`;
+- remove the obsolete `feat/thinking-map-v1` push trigger;
+- cancel superseded runs for the same workflow/ref or pull request.
+
+Out of scope:
+- changing Governance checks;
+- changing Thinking Map validation;
+- changing the production build;
+- changing Node/runtime versions;
+- public content or schema changes.
+
+## Authority
+
+Authorized:
+- edit the CI workflow on `chore/ci-noise-reduction`;
+- preserve existing verification commands while changing trigger/concurrency behavior;
+- open a review pull request.
+
+Not authorized:
+- weaken Governance, validation, boundary, test, build, or publication checks;
+- change application/pipeline semantics;
+- merge without separate review/authority.
+
+## Constraints
+
+- PR verification must remain mandatory-capable;
+- `main` must still receive final verification after merge;
+- manual `workflow_dispatch` must remain available;
+- verification commands must remain unchanged.
+
+## Stop Conditions
+
+Stop if reducing notifications would skip PR verification, skip final `main` verification, or alter public Thinking Map semantics.
+
+## Verification
+
+Satisfied:
+
+- GitHub Actions PR run #42 passed Governance, public Thinking Map validation, and production build;
+- maintenance branch commits produced no feature-branch push verification run;
+- PR verification remained active for PR #5;
+- workflow commands were unchanged; only trigger/concurrency orchestration changed.
+
+## Completion Criteria
+
+One logical feature update should normally produce one PR verification run and one final `main` verification run, rather than an extra feature-branch push run.
