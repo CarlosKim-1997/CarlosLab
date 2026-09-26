@@ -1,6 +1,6 @@
 ---
 schema: state/v1
-status: IN_PROGRESS
+status: READY
 areas:
   - global
 ---
@@ -10,27 +10,43 @@ areas:
 
 Thinking Map visual atlas v2 is integrated on `main`.
 
-T-004 is improving mobile readability and interaction cost on `feat/thinking-map-mobile-usability-v3`.
+T-004 Thinking Map mobile usability v3 is complete on `feat/thinking-map-mobile-usability-v3`.
 
-The public data contract remains unchanged.
+The branch improves:
+- mobile lineage readability;
+- timeline scroll discoverability;
+- recent/peak timeline count readability;
+- lineage detail density.
+
+The public Thinking Map schema and 202-entry archive are unchanged.
 
 ## Active Work
 
-- T-004 — Thinking Map mobile usability v3.
+No mutating implementation Task is active.
+
+Review target:
+- PR #4 — Thinking Map mobile usability v3.
 
 ## Blockers
 
-No known implementation blocker.
+No technical blocker remains for T-004.
+
+Merge remains human-gated by C-002.
 
 ## Material Risks
 
-- over-compressing lineage chronology on narrow screens;
-- adding labels that visually overstate recent activity;
-- using interaction patterns that hide evidence too aggressively;
-- accidentally turning presentation work into a schema change.
+- future lineage growth may make compact mobile rails too dense;
+- future longer monthly history may require timeline grouping/zoom;
+- explanatory text should remain so frequency is not interpreted as quality.
 
 ## Verification Basis
 
-Production `/ideas` is reachable on Vercel and the v2 visual components are present.
+GitHub Actions PR run #37 passed:
+- Repository Governance;
+- public Thinking Map validation;
+- Next.js production build.
 
-T-004 is presentation-only and must preserve the existing 202-entry public projection.
+Vercel preview for the UI implementation commit is READY and `/ideas` returns HTTP 200 with the new responsive presentation markers.
+
+See:
+`work/reports/t-004-thinking-map-mobile-usability-v3.md`.
