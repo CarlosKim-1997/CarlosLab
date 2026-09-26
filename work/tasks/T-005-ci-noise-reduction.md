@@ -1,7 +1,7 @@
 ---
 schema: task/v1
 id: T-005
-status: IN_PROGRESS
+status: COMPLETE
 areas:
   - global
 depends_on:
@@ -53,11 +53,12 @@ Stop if reducing notifications would skip PR verification, skip final `main` ver
 
 ## Verification
 
-Before COMPLETE:
-- workflow syntax is accepted by GitHub Actions;
-- PR run executes Governance and application jobs;
-- no feature-branch push run is created for the maintenance branch;
-- superseded same-PR runs are cancelable through concurrency.
+Satisfied:
+
+- GitHub Actions PR run #42 passed Governance, public Thinking Map validation, and production build;
+- maintenance branch commits produced no feature-branch push verification run;
+- PR verification remained active for PR #5;
+- workflow commands were unchanged; only trigger/concurrency orchestration changed.
 
 ## Completion Criteria
 
