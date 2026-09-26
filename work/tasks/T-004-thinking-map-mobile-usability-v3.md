@@ -1,7 +1,7 @@
 ---
 schema: task/v1
 id: T-004
-status: IN_PROGRESS
+status: COMPLETE
 areas:
   - thinking-map
 depends_on:
@@ -56,15 +56,18 @@ Not authorized:
 
 ## Verification
 
-Before COMPLETE:
-- Governance passes;
-- public Thinking Map validation passes;
-- Next.js production build passes;
-- no chart/runtime dependency is added;
-- narrow-screen lineage layout does not require a 980px-wide combined label+timeline table;
-- timeline includes explicit horizontal-scroll affordance;
-- recent/peak counts are directly visible;
-- lineage details are collapsible with native `details/summary`.
+Satisfied:
+
+- Governance passed on GitHub Actions PR run #37;
+- public Thinking Map validation passed;
+- Next.js production build passed;
+- no chart/runtime dependency was added;
+- mobile lineage renders in its own stacked layout and no longer uses the 980px combined label+timeline table;
+- desktop/tablet chronology preserves the wide map with explicit scroll affordance;
+- timeline includes right-edge fade and a mobile swipe hint;
+- recent three months and peak receive direct count labels without changing the linear data scale;
+- the first three lineage details remain visible and the remaining six use native `details/summary`;
+- Vercel preview for the UI implementation commit is READY and returns `/ideas` with the new responsive lineage/timeline markers.
 
 ## Stop Conditions
 
