@@ -28,6 +28,18 @@ Out of scope:
 - changing Node/runtime versions;
 - public content or schema changes.
 
+## Authority
+
+Authorized:
+- edit the CI workflow on `chore/ci-noise-reduction`;
+- preserve existing verification commands while changing trigger/concurrency behavior;
+- open a review pull request.
+
+Not authorized:
+- weaken Governance, validation, boundary, test, build, or publication checks;
+- change application/pipeline semantics;
+- merge without separate review/authority.
+
 ## Constraints
 
 - PR verification must remain mandatory-capable;
