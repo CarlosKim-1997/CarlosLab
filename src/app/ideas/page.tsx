@@ -152,7 +152,7 @@ export default function IdeasPage() {
           <LineageMap entries={thinking.entries} lineages={thinking.lineages} />
 
           <div className="mt-6 space-y-4">
-            {thinking.lineages.map((lineage, index) => {
+            {thinking.lineages.slice(0, 3).map((lineage, index) => {
               const examples = lineage.entryIds
                 .map((id) => entryMap.get(id))
                 .filter((entry) => entry !== undefined)
@@ -192,6 +192,64 @@ export default function IdeasPage() {
                 </article>
               );
             })}
+
+            <details className="group rounded-2xl border border-white/10 bg-black/10">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm text-zinc-400 transition hover:text-zinc-200">
+                <span>
+                  나머지 {Math.max(0, thinking.lineages.length - 3)}개 계보 상세 보기
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="font-mono text-xs text-zinc-600 transition group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+
+              <div className="space-y-4 border-t border-white/5 p-4 sm:p-5">
+                {thinking.lineages.slice(3).map((lineage, offset) => {
+                  const index = offset + 3;
+                  const examples = lineage.entryIds
+                    .map((id) => entryMap.get(id))
+                    .filter((entry) => entry !== undefined)
+                    .slice(0, 5);
+
+                  return (
+                    <article
+                      key={lineage.id}
+                      className="grid gap-5 rounded-2xl border border-white/10 bg-zinc-900/25 p-5 lg:grid-cols-[180px_1fr] lg:p-6"
+                    >
+                      <div>
+                        <p className="font-mono text-xs text-amber-400">
+                          {String(index + 1).padStart(2, "0")} · {lineage.id}
+                        </p>
+                        <p className="mt-2 text-xs text-zinc-600">
+                          {lineage.entryIds.length} connected entries
+                        </p>
+                      </div>
+                      <div>
+                        <h3 className="mb-3 text-xl font-semibold text-zinc-100">
+                          {lineage.name}
+                        </h3>
+                        <p className="max-w-4xl text-sm leading-7 text-zinc-400">
+                          {lineage.summary}
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {examples.map((entry) => (
+                            <span
+                              key={entry!.id}
+                              className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-500"
+                            >
+                              {entry!.id} · {entry!.title}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </details>
           </div>
         </Container>
       </section>
