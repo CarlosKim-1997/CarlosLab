@@ -5,8 +5,8 @@ export function SiteFooter() {
   return (
     <footer className="mt-auto border-t border-white/10 py-10">
       <Container className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-zinc-500">
-          Carlos Lab — 만든 것들과 라이브 데모.
+        <p className="text-sm text-stone-500">
+          Carlos Lab — 만든 도구와 실행 가능한 데모.
         </p>
         <div className="flex gap-4 text-sm">
           <Link href="/projects" className="text-zinc-400 hover:text-zinc-200">

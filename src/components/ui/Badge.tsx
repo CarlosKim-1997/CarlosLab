@@ -7,15 +7,15 @@ type BadgeProps = {
 
 const variantClasses: Record<NonNullable<BadgeProps["variant"]>, string> = {
   default: "bg-zinc-800 text-zinc-300 border-zinc-700",
-  status: "bg-violet-950/60 text-violet-300 border-violet-800/50",
-  kind: "bg-cyan-950/60 text-cyan-300 border-cyan-800/50",
-  accent: "bg-emerald-950/60 text-emerald-300 border-emerald-800/50",
+  status: "bg-zinc-800/90 text-stone-300 border-zinc-700",
+  kind: "bg-stone-900/80 text-stone-300 border-stone-700/60",
+  accent: "bg-lab-accent-muted text-stone-200 border-lab-accent/30",
 };
 
 export function Badge({ children, variant = "default" }: BadgeProps) {
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${variantClasses[variant]}`}
+      className={`inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-medium ${variantClasses[variant]}`}
     >
       {children}
     </span>

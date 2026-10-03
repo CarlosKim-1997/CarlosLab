@@ -2,13 +2,13 @@ import type { ProjectMeta } from "@/lib/project/types";
 
 const meta = {
   slug: "ai-workflow-orchestrator",
-  title: "AI 워크플로우 오케스트레이터",
+  title: "고객 메일 워크플로우 오케스트레이터",
   subtitle: "고객 이메일 분류 → Jira·Slack·회신까지 한 흐름으로.",
   status: "active",
   kind: "ai",
   year: 2026,
   summary:
-    "들어온 이메일을 LLM으로 분류하고, 규칙에 맞는 워크플로우를 만든 뒤 Jira·Slack·메일 회신까지 실행하는 Streamlit PoC.",
+    "들어온 이메일을 의도·우선순위별로 분류하고, 규칙에 맞는 워크플로우를 만든 뒤 Jira·Slack·메일 회신까지 실행하는 Streamlit PoC.",
   problem:
     "고객센터는 하루 수백 건의 메일을 사람이 분류·배정합니다. 긴급 건이 묻히기 쉽습니다.",
   solution:
@@ -30,9 +30,9 @@ const meta = {
     warning: "Streamlit Cloud 데모입니다. 한동안 안 쓰면 첫 로드가 30초쯤 걸릴 수 있습니다.",
   },
   media: {
-    cover: "/media/projects/ai-workflow-orchestrator/cover.png",
-    og: "/media/projects/ai-workflow-orchestrator/cover.png",
-    screenshots: ["/media/projects/ai-workflow-orchestrator/cover.png"],
+    cover: "/media/projects/ai-workflow-orchestrator/cover.svg",
+    og: "/media/projects/ai-workflow-orchestrator/og.png",
+    screenshots: ["/media/projects/ai-workflow-orchestrator/cover.svg"],
   },
   visibility: "public",
   featured: true,

@@ -50,10 +50,10 @@ export function ThinkingTimeline({ entries }: { entries: ThinkingEntry[] }) {
   const recentMonths = new Set(months.slice(-3));
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-black/10 p-6 lg:p-8">
+    <div className="rounded-lg border border-white/10 bg-black/10 p-6 lg:p-8">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-violet-300">
+          <p className="text-sm font-medium text-stone-500">
             {start} → {end}
           </p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500">
@@ -63,7 +63,7 @@ export function ThinkingTimeline({ entries }: { entries: ThinkingEntry[] }) {
           </p>
         </div>
         <p className="font-mono text-xs text-zinc-600">
-          {activeMonths.length} active months · peak {max}
+          활성 {activeMonths.length}개월 · 최대 {max}
         </p>
       </div>
 

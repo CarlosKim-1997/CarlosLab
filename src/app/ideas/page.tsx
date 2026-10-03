@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getEntryMap, getThinkingMap } from "@/lib/thinking/getThinkingMap";
 
 export const metadata = buildPageMetadata(
-  "Thinking Map",
+  "사고 지도",
   "아이디어의 목록보다, 반복되는 사고 패턴과 시간이 지나며 연결된 생각의 계보를 보여주는 지도.",
 );
 
@@ -41,8 +41,8 @@ export default function IdeasPage() {
     <>
       <section className="border-b border-white/10 py-16 sm:py-24">
         <Container>
-          <p className="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-violet-400">
-            Thinking Map · {thinking.snapshot}
+          <p className="mb-4 text-sm font-medium text-stone-500">
+            사고 지도 · {thinking.snapshot}
           </p>
           <h1 className="mb-6 max-w-4xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
             무엇을 생각했는지보다,
@@ -56,17 +56,17 @@ export default function IdeasPage() {
 
           <div className="grid max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Ideas & Insights", thinking.stats.entryCount],
-              ["Domains", Object.keys(thinking.stats.domainCounts).length],
-              ["Patterns", thinking.patterns.length],
-              ["Lineages", thinking.lineages.length],
+              ["아이디어·인사이트", thinking.stats.entryCount],
+              ["도메인", Object.keys(thinking.stats.domainCounts).length],
+              ["패턴", thinking.patterns.length],
+              ["계보", thinking.lineages.length],
             ].map(([label, value]) => (
               <div
                 key={String(label)}
-                className="rounded-2xl border border-white/10 bg-zinc-900/35 px-5 py-4"
+                className="rounded-lg border border-white/10 bg-zinc-900/35 px-5 py-4"
               >
                 <p className="text-2xl font-semibold text-zinc-100">{value}</p>
-                <p className="mt-1 font-mono text-xs uppercase tracking-wider text-zinc-600">
+                <p className="mt-1 text-xs text-stone-600">
                   {label}
                 </p>
               </div>
@@ -78,8 +78,8 @@ export default function IdeasPage() {
       <section className="py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
-              Recurring patterns
+            <p className="mb-3 text-sm font-medium text-stone-500">
+              반복 패턴
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               분야가 달라도 반복되는 사고 습관
@@ -94,9 +94,9 @@ export default function IdeasPage() {
             {featuredPatterns.map((pattern) => (
               <article
                 key={pattern.id}
-                className="rounded-2xl border border-white/10 bg-zinc-900/25 p-6"
+                className="rounded-lg border border-white/10 bg-zinc-900/25 p-6"
               >
-                <p className="mb-3 font-mono text-xs text-cyan-400">{pattern.id}</p>
+                <p className="mb-3 font-mono text-xs text-stone-500">{pattern.id}</p>
                 <h3 className="mb-3 text-lg font-semibold leading-7 text-zinc-100">
                   {pattern.name}
                 </h3>
@@ -104,7 +104,7 @@ export default function IdeasPage() {
                   {pattern.description}
                 </p>
                 <p className="mt-5 font-mono text-xs text-zinc-600">
-                  evidence · {pattern.evidenceEntryIds.join(" · ")}
+                  근거 · {pattern.evidenceEntryIds.join(" · ")}
                 </p>
               </article>
             ))}
@@ -115,8 +115,8 @@ export default function IdeasPage() {
       <section className="border-y border-white/5 bg-zinc-900/20 py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-emerald-400">
-              Thinking landscape
+            <p className="mb-3 text-sm font-medium text-stone-500">
+              사고 지형
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               생각이 머문 영역
@@ -137,8 +137,8 @@ export default function IdeasPage() {
       <section className="py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-amber-400">
-              Thought lineages
+            <p className="mb-3 text-sm font-medium text-stone-500">
+              사고 계보
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               몇 달 뒤 다른 분야에서 다시 나타난 생각들
@@ -161,14 +161,14 @@ export default function IdeasPage() {
               return (
                 <article
                   key={lineage.id}
-                  className="grid gap-5 rounded-2xl border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[180px_1fr]"
+                  className="grid gap-5 rounded-lg border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[180px_1fr]"
                 >
                   <div>
-                    <p className="font-mono text-xs text-amber-400">
+                    <p className="font-mono text-xs text-stone-500">
                       {String(index + 1).padStart(2, "0")} · {lineage.id}
                     </p>
                     <p className="mt-2 text-xs text-zinc-600">
-                      {lineage.entryIds.length} connected entries
+                      연결 항목 {lineage.entryIds.length}개
                     </p>
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export default function IdeasPage() {
               );
             })}
 
-            <details className="group rounded-2xl border border-white/10 bg-black/10">
+            <details className="group rounded-lg border border-white/10 bg-black/10">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm text-zinc-400 transition hover:text-zinc-200">
                 <span>
                   나머지 {Math.max(0, thinking.lineages.length - 3)}개 계보 상세 보기
@@ -217,14 +217,14 @@ export default function IdeasPage() {
                   return (
                     <article
                       key={lineage.id}
-                      className="grid gap-5 rounded-2xl border border-white/10 bg-zinc-900/25 p-5 lg:grid-cols-[180px_1fr] lg:p-6"
+                      className="grid gap-5 rounded-lg border border-white/10 bg-zinc-900/25 p-5 lg:grid-cols-[180px_1fr] lg:p-6"
                     >
                       <div>
-                        <p className="font-mono text-xs text-amber-400">
+                        <p className="font-mono text-xs text-stone-500">
                           {String(index + 1).padStart(2, "0")} · {lineage.id}
                         </p>
                         <p className="mt-2 text-xs text-zinc-600">
-                          {lineage.entryIds.length} connected entries
+                          연결 항목 {lineage.entryIds.length}개
                         </p>
                       </div>
                       <div>
@@ -257,8 +257,8 @@ export default function IdeasPage() {
       <section className="border-y border-white/5 bg-zinc-900/20 py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-violet-400">
-              Change over time
+            <p className="mb-3 text-sm font-medium text-stone-500">
+              시간에 따른 변화
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               한 번의 성향 진단이 아니라 시간에 따른 기록
@@ -276,12 +276,12 @@ export default function IdeasPage() {
             {years.map(({ year, count, topDomains }) => (
               <article
                 key={year}
-                className="rounded-2xl border border-white/10 bg-black/10 p-6"
+                className="rounded-lg border border-white/10 bg-black/10 p-6"
               >
                 <div className="mb-5 flex items-end justify-between">
                   <h3 className="text-3xl font-semibold text-zinc-100">{year}</h3>
                   <p className="font-mono text-sm text-zinc-600">
-                    {count} first-seen entries
+                    처음 등장 {count}개
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -304,8 +304,8 @@ export default function IdeasPage() {
       <section className="py-16">
         <Container>
           <div className="mb-8 max-w-3xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
-              Evidence archive
+            <p className="mb-3 text-sm font-medium text-stone-500">
+              근거 아카이브
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               202개의 실제 사고 단위
@@ -322,16 +322,16 @@ export default function IdeasPage() {
 
       <section className="border-t border-white/10 py-12">
         <Container>
-          <div className="max-w-3xl rounded-2xl border border-white/10 bg-zinc-900/25 p-6">
-            <p className="mb-2 font-mono text-xs uppercase tracking-wider text-zinc-600">
-              Method & privacy
+          <div className="max-w-3xl rounded-lg border border-white/10 bg-zinc-900/25 p-6">
+            <p className="mb-2 text-sm font-medium text-stone-500">
+              방법·개인정보
             </p>
             <p className="text-sm leading-6 text-zinc-400">
               {thinking.method.summary} {thinking.method.privacy}{" "}
               {thinking.method.review}
             </p>
             <p className="mt-4 font-mono text-xs text-zinc-600">
-              export cutoff · {thinking.exportCutoff}
+              내보내기 기준 · {thinking.exportCutoff}
             </p>
           </div>
         </Container>

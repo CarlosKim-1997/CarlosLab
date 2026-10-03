@@ -8,24 +8,28 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   href?: string;
   external?: boolean;
+  /** When set with `href`, suggests a filename for same-origin downloads. */
+  download?: string;
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-cyan-500 text-zinc-950 hover:bg-cyan-400 border border-cyan-400/50",
+    "bg-lab-accent text-zinc-950 hover:bg-lab-accent-hover border border-lab-accent/80",
   secondary:
-    "bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700",
-  ghost: "bg-transparent text-zinc-300 hover:bg-zinc-800/60 border border-transparent",
+    "bg-zinc-800/80 text-stone-200 hover:bg-zinc-800 border border-white/10",
+  ghost:
+    "bg-transparent text-stone-300 hover:bg-zinc-800/60 border border-transparent",
 };
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500";
+  "inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lab-accent";
 
 export function Button({
   children,
   variant = "primary",
   href,
   external,
+  download,
   className = "",
   ...props
 }: ButtonProps) {
@@ -40,6 +44,13 @@ export function Button({
           rel="noopener noreferrer"
           className={classes}
         >
+          {children}
+        </a>
+      );
+    }
+    if (download) {
+      return (
+        <a href={href} download={download} className={classes}>
           {children}
         </a>
       );

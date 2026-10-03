@@ -22,6 +22,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run validate:content` | Validate project metadata and content |
 | `npm run create:project -- <slug>` | Scaffold a new project |
 | `npm run check:demo-links` | List iframe/demo URLs to verify |
+| `npm run generate:og-images` | Rasterize SVG covers to `og.png` (1200×630) |
+| `npm run check:public-assets` | HEAD-check PDF + OG on `BASE_URL` |
 
 ## Add a project
 
@@ -56,6 +58,7 @@ npm run sync:deploys -- --deploy  # stale/missing 시 hook POST
 2. Framework: **Next.js** (자동 감지)
 3. Environment Variable: `NEXT_PUBLIC_SITE_URL` = 배포 URL (예: `https://carlos-lab.vercel.app`)
 4. Deploy
+5. 배포 후 공개 자산 확인: `BASE_URL=https://<your-domain> npm run check:public-assets` (포트폴리오 PDF, OG PNG)
 
 CLI:
 

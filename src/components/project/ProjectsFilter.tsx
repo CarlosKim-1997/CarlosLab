@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import { Badge } from "@/components/ui/Badge";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 import {
   projectKindLabels,
   projectStatusLabels,
@@ -45,9 +46,7 @@ export function ProjectsFilter({ projects, featuredProjects }: ProjectsFilterPro
   return (
     <div className="space-y-10">
       <div className="flex flex-wrap items-center gap-3">
-        <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
-          필터
-        </span>
+        <span className="text-sm font-medium text-stone-500">필터</span>
         <select
           value={statusFilter}
           onChange={(e) =>
@@ -80,7 +79,7 @@ export function ProjectsFilter({ projects, featuredProjects }: ProjectsFilterPro
           <button
             type="button"
             onClick={clearFilters}
-            className="text-sm text-cyan-400 hover:text-cyan-300"
+            className="text-sm text-lab-accent hover:text-lab-accent-hover"
           >
             초기화
           </button>
@@ -90,9 +89,7 @@ export function ProjectsFilter({ projects, featuredProjects }: ProjectsFilterPro
 
       {featuredProjects.length > 0 && statusFilter === ALL && kindFilter === ALL && (
         <section className="space-y-4">
-          <h2 className="text-sm font-mono uppercase tracking-widest text-cyan-400">
-            추천
-          </h2>
+          <SectionLabel>먼저 볼 만한 것</SectionLabel>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} featured />
@@ -102,9 +99,7 @@ export function ProjectsFilter({ projects, featuredProjects }: ProjectsFilterPro
       )}
 
       <section className="space-y-4">
-        <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">
-          전체 프로젝트
-        </h2>
+        <SectionLabel className="text-stone-400">전체 프로젝트</SectionLabel>
         {filtered.length === 0 ? (
           <p className="text-zinc-500">현재 필터에 맞는 프로젝트가 없습니다.</p>
         ) : (

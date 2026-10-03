@@ -4,7 +4,8 @@ import type { ProjectMeta } from "@/lib/project/types";
 const SITE_NAME = "Carlos Lab";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const DEFAULT_DESCRIPTION =
-  "개인 프로젝트 모음. 브라우저에서 바로 돌려 볼 수 있는 데모 포함.";
+  "만든 도구와 실험을 모아 둔 작업실. 설명과 함께, 되는 것은 브라우저에서 바로 확인할 수 있습니다.";
+const DEFAULT_OG_IMAGE = "/og/carlos-lab.png";
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -19,11 +20,20 @@ export const rootMetadata: Metadata = {
     siteName: SITE_NAME,
     title: SITE_NAME,
     description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_NAME,
     description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
@@ -58,6 +68,20 @@ export function buildPageMetadata(
     openGraph: {
       title,
       description,
+      images: [
+        {
+          url: DEFAULT_OG_IMAGE,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [DEFAULT_OG_IMAGE],
     },
   };
 }

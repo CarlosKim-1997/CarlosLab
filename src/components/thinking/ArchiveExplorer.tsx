@@ -64,7 +64,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-3 rounded-2xl border border-white/10 bg-zinc-900/35 p-4 md:grid-cols-2 xl:grid-cols-5">
+      <div className="grid gap-3 rounded-lg border border-white/10 bg-zinc-900/35 p-4 md:grid-cols-2 xl:grid-cols-5">
         <label className="xl:col-span-2">
           <span className="sr-only">검색</span>
           <input
@@ -74,7 +74,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
               resetLimit();
             }}
             placeholder="ID, 제목, 내용 검색"
-            className="h-11 w-full rounded-lg border border-white/10 bg-black/20 px-3 text-sm text-zinc-100 outline-none transition placeholder:text-zinc-600 focus:border-cyan-400/50"
+            className="h-11 w-full rounded-lg border border-white/10 bg-black/20 px-3 text-sm text-zinc-100 outline-none transition placeholder:text-zinc-600 focus:border-lab-accent/45"
           />
         </label>
 
@@ -85,7 +85,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
             setDomain(event.target.value);
             resetLimit();
           }}
-          className="h-11 rounded-lg border border-white/10 bg-[#0b1019] px-3 text-sm text-zinc-300 outline-none focus:border-cyan-400/50"
+          className="h-11 rounded-lg border border-white/10 bg-[#0b1019] px-3 text-sm text-zinc-300 outline-none focus:border-lab-accent/45"
         >
           <option value="all">모든 도메인</option>
           {domains.map((item) => (
@@ -102,7 +102,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
             setType(event.target.value as PublicThinkingType | "all");
             resetLimit();
           }}
-          className="h-11 rounded-lg border border-white/10 bg-[#0b1019] px-3 text-sm text-zinc-300 outline-none focus:border-cyan-400/50"
+          className="h-11 rounded-lg border border-white/10 bg-[#0b1019] px-3 text-sm text-zinc-300 outline-none focus:border-lab-accent/45"
         >
           <option value="all">모든 유형</option>
           {Object.entries(typeLabels).map(([value, label]) => (
@@ -116,7 +116,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
           aria-label="정렬"
           value={sort}
           onChange={(event) => setSort(event.target.value as typeof sort)}
-          className="h-11 rounded-lg border border-white/10 bg-[#0b1019] px-3 text-sm text-zinc-300 outline-none focus:border-cyan-400/50"
+          className="h-11 rounded-lg border border-white/10 bg-[#0b1019] px-3 text-sm text-zinc-300 outline-none focus:border-lab-accent/45"
         >
           <option value="newest">최근 순</option>
           <option value="oldest">오래된 순</option>
@@ -138,7 +138,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
                 }}
                 className={`rounded-full border px-3 py-1.5 transition ${
                   maturity === value
-                    ? "border-cyan-400/50 bg-cyan-400/10 text-cyan-200"
+                    ? "border-lab-accent/45 bg-lab-accent-muted text-stone-200"
                     : "border-white/10 text-zinc-500 hover:border-white/20 hover:text-zinc-300"
                 }`}
               >
@@ -154,10 +154,10 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
           <article
             id={entry.id}
             key={entry.id}
-            className="rounded-2xl border border-white/10 bg-zinc-900/25 p-5 transition hover:border-cyan-400/25 hover:bg-zinc-900/45"
+            className="rounded-lg border border-white/10 bg-zinc-900/25 p-5 transition hover:border-stone-500/30 hover:bg-zinc-900/45"
           >
             <div className="mb-4 flex flex-wrap items-center gap-2 text-xs">
-              <span className="font-mono text-cyan-300">{entry.id}</span>
+              <span className="font-mono text-stone-400">{entry.id}</span>
               <span className="rounded-full border border-white/10 px-2 py-1 text-zinc-500">
                 {typeLabels[entry.type]}
               </span>
@@ -180,7 +180,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
           <button
             type="button"
             onClick={() => setLimit((current) => current + PAGE_SIZE)}
-            className="rounded-lg border border-white/10 px-5 py-2.5 text-sm text-zinc-300 transition hover:border-cyan-400/30 hover:text-cyan-200"
+            className="rounded-md border border-white/10 px-5 py-2.5 text-sm text-stone-300 transition hover:border-stone-500/35 hover:text-stone-100"
           >
             더 보기 ({filtered.length - visible.length}개 남음)
           </button>
