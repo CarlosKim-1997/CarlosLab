@@ -63,7 +63,7 @@ export default function IdeasPage() {
             ].map(([label, value]) => (
               <div
                 key={String(label)}
-                className="rounded-2xl border border-white/10 bg-zinc-900/35 px-5 py-4"
+                className="rounded-lg border border-white/10 bg-zinc-900/35 px-5 py-4"
               >
                 <p className="text-2xl font-semibold text-zinc-100">{value}</p>
                 <p className="mt-1 text-xs text-stone-600">
@@ -94,7 +94,7 @@ export default function IdeasPage() {
             {featuredPatterns.map((pattern) => (
               <article
                 key={pattern.id}
-                className="rounded-2xl border border-white/10 bg-zinc-900/25 p-6"
+                className="rounded-lg border border-white/10 bg-zinc-900/25 p-6"
               >
                 <p className="mb-3 font-mono text-xs text-stone-500">{pattern.id}</p>
                 <h3 className="mb-3 text-lg font-semibold leading-7 text-zinc-100">
@@ -161,7 +161,7 @@ export default function IdeasPage() {
               return (
                 <article
                   key={lineage.id}
-                  className="grid gap-5 rounded-2xl border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[180px_1fr]"
+                  className="grid gap-5 rounded-lg border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[180px_1fr]"
                 >
                   <div>
                     <p className="font-mono text-xs text-amber-400">
@@ -193,7 +193,7 @@ export default function IdeasPage() {
               );
             })}
 
-            <details className="group rounded-2xl border border-white/10 bg-black/10">
+            <details className="group rounded-lg border border-white/10 bg-black/10">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm text-zinc-400 transition hover:text-zinc-200">
                 <span>
                   나머지 {Math.max(0, thinking.lineages.length - 3)}개 계보 상세 보기
@@ -217,7 +217,7 @@ export default function IdeasPage() {
                   return (
                     <article
                       key={lineage.id}
-                      className="grid gap-5 rounded-2xl border border-white/10 bg-zinc-900/25 p-5 lg:grid-cols-[180px_1fr] lg:p-6"
+                      className="grid gap-5 rounded-lg border border-white/10 bg-zinc-900/25 p-5 lg:grid-cols-[180px_1fr] lg:p-6"
                     >
                       <div>
                         <p className="font-mono text-xs text-amber-400">
@@ -276,7 +276,7 @@ export default function IdeasPage() {
             {years.map(({ year, count, topDomains }) => (
               <article
                 key={year}
-                className="rounded-2xl border border-white/10 bg-black/10 p-6"
+                className="rounded-lg border border-white/10 bg-black/10 p-6"
               >
                 <div className="mb-5 flex items-end justify-between">
                   <h3 className="text-3xl font-semibold text-zinc-100">{year}</h3>
@@ -322,7 +322,7 @@ export default function IdeasPage() {
 
       <section className="border-t border-white/10 py-12">
         <Container>
-          <div className="max-w-3xl rounded-2xl border border-white/10 bg-zinc-900/25 p-6">
+          <div className="max-w-3xl rounded-lg border border-white/10 bg-zinc-900/25 p-6">
             <p className="mb-2 text-sm font-medium text-stone-500">
               Method & privacy
             </p>

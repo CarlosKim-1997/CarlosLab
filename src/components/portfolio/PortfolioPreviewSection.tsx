@@ -35,7 +35,7 @@ export function PortfolioPreviewSection() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-zinc-900/40 p-5 sm:p-6">
+          <div className="rounded-lg border border-white/10 bg-zinc-900/40 p-5 sm:p-6">
             <h3 className="mb-4 text-sm font-semibold text-stone-400">
               7단계 프로세스 (요약)
             </h3>
@@ -68,7 +68,7 @@ export function PortfolioPreviewSection() {
             {PORTFOLIO_CASES.map((item) => (
               <li
                 key={item.id}
-                className="rounded-xl border border-white/10 bg-zinc-900/30 p-4"
+                className="rounded-lg border border-white/10 bg-zinc-900/30 p-4"
               >
                 <p className="mb-1 font-mono text-xs text-violet-400/90">
                   CASE {item.id}

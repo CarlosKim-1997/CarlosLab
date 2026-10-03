@@ -64,7 +64,7 @@ export function ArchiveExplorer({ entries }: { entries: ThinkingEntry[] }) {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-3 rounded-2xl border border-white/10 bg-zinc-900/35 p-4 md:grid-cols-2 xl:grid-cols-5">
+      <div className="grid gap-3 rounded-lg border border-white/10 bg-zinc-900/35 p-4 md:grid-cols-2 xl:grid-cols-5">
         <label className="xl:col-span-2">
           <span className="sr-only">검색</span>
           <input
