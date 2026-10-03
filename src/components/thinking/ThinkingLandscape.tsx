@@ -86,7 +86,7 @@ export function ThinkingLandscape({
                   {index + 1}. {domain}
                 </p>
                 <p className="mt-0.5 font-mono text-xs text-zinc-600">
-                  {count} entries · {share}%
+                  {count}개 · {share}%
                 </p>
               </div>
             </div>

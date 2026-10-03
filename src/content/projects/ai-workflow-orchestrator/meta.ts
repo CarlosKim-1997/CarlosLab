@@ -30,9 +30,9 @@ const meta = {
     warning: "Streamlit Cloud 데모입니다. 한동안 안 쓰면 첫 로드가 30초쯤 걸릴 수 있습니다.",
   },
   media: {
-    cover: "/media/projects/ai-workflow-orchestrator/cover.png",
-    og: "/media/projects/ai-workflow-orchestrator/cover.png",
-    screenshots: ["/media/projects/ai-workflow-orchestrator/cover.png"],
+    cover: "/media/projects/ai-workflow-orchestrator/cover.svg",
+    og: "/media/projects/ai-workflow-orchestrator/cover.svg",
+    screenshots: ["/media/projects/ai-workflow-orchestrator/cover.svg"],
   },
   visibility: "public",
   featured: true,

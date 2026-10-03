@@ -27,9 +27,9 @@ const meta = {
     warning: "Expo Web 빌드 후 iframe 연결 예정입니다.",
   },
   media: {
-    cover: "/media/projects/bobkinator/cover.webp",
-    og: "/media/projects/bobkinator/og.webp",
-    screenshots: ["/media/projects/bobkinator/screenshot-01.webp"],
+    cover: "/media/projects/bobkinator/cover.svg",
+    og: "/media/projects/bobkinator/cover.svg",
+    screenshots: ["/media/projects/bobkinator/cover.svg"],
   },
   visibility: "public",
   featured: false,

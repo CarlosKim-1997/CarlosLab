@@ -36,3 +36,5 @@ When UI or global styling changes, attach **three** desktop screenshots (1280×8
 | `ui-03-projects.png` | `/projects` | List header + at least one project card |
 
 If a change mainly affects another route (e.g. `/ideas`), swap one capture for that page and note the substitution in the PR.
+
+Default substitutions: `/ideas` → `ui-03-ideas-landscape.png`; project media → `ui-03-project-<slug>.png`.

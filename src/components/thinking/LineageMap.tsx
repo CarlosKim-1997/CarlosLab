@@ -103,7 +103,7 @@ export function LineageMap({
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-sm font-medium text-stone-500">
-            first-seen chronology
+            처음 등장 시점
           </p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500">
             각 줄은 하나의 사고 계보입니다. 점은 그 계보에 속한 사고 단위가 처음
@@ -111,7 +111,7 @@ export function LineageMap({
           </p>
         </div>
         <p className="font-mono text-xs text-zinc-600">
-          {lineages.length} lineages · {lineageEntries.length} memberships
+          계보 {lineages.length}개 · 연결 {lineageEntries.length}건
         </p>
       </div>
 

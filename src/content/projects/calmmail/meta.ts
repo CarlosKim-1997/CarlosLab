@@ -30,9 +30,9 @@ const meta = {
       "v0.1.0 Windows 설치 파일입니다. 새 버전은 GitHub Releases에서 받을 수 있습니다.",
   },
   media: {
-    cover: "/media/projects/calmmail/cover.png",
-    og: "/media/projects/calmmail/cover.png",
-    screenshots: ["/media/projects/calmmail/cover.png"],
+    cover: "/media/projects/calmmail/cover.svg",
+    og: "/media/projects/calmmail/cover.svg",
+    screenshots: ["/media/projects/calmmail/cover.svg"],
   },
   visibility: "public",
   featured: true,

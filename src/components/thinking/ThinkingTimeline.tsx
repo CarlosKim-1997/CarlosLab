@@ -63,7 +63,7 @@ export function ThinkingTimeline({ entries }: { entries: ThinkingEntry[] }) {
           </p>
         </div>
         <p className="font-mono text-xs text-zinc-600">
-          {activeMonths.length} active months · peak {max}
+          활성 {activeMonths.length}개월 · 최대 {max}
         </p>
       </div>
 

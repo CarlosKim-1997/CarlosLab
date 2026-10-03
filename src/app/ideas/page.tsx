@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getEntryMap, getThinkingMap } from "@/lib/thinking/getThinkingMap";
 
 export const metadata = buildPageMetadata(
-  "Thinking Map",
+  "사고 지도",
   "아이디어의 목록보다, 반복되는 사고 패턴과 시간이 지나며 연결된 생각의 계보를 보여주는 지도.",
 );
 
@@ -42,7 +42,7 @@ export default function IdeasPage() {
       <section className="border-b border-white/10 py-16 sm:py-24">
         <Container>
           <p className="mb-4 text-sm font-medium text-stone-500">
-            Thinking Map · {thinking.snapshot}
+            사고 지도 · {thinking.snapshot}
           </p>
           <h1 className="mb-6 max-w-4xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
             무엇을 생각했는지보다,
@@ -56,10 +56,10 @@ export default function IdeasPage() {
 
           <div className="grid max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Ideas & Insights", thinking.stats.entryCount],
-              ["Domains", Object.keys(thinking.stats.domainCounts).length],
-              ["Patterns", thinking.patterns.length],
-              ["Lineages", thinking.lineages.length],
+              ["아이디어·인사이트", thinking.stats.entryCount],
+              ["도메인", Object.keys(thinking.stats.domainCounts).length],
+              ["패턴", thinking.patterns.length],
+              ["계보", thinking.lineages.length],
             ].map(([label, value]) => (
               <div
                 key={String(label)}
@@ -79,7 +79,7 @@ export default function IdeasPage() {
         <Container>
           <div className="mb-8 max-w-2xl">
             <p className="mb-3 text-sm font-medium text-stone-500">
-              Recurring patterns
+              반복 패턴
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               분야가 달라도 반복되는 사고 습관
@@ -104,7 +104,7 @@ export default function IdeasPage() {
                   {pattern.description}
                 </p>
                 <p className="mt-5 font-mono text-xs text-zinc-600">
-                  evidence · {pattern.evidenceEntryIds.join(" · ")}
+                  근거 · {pattern.evidenceEntryIds.join(" · ")}
                 </p>
               </article>
             ))}
@@ -116,7 +116,7 @@ export default function IdeasPage() {
         <Container>
           <div className="mb-8 max-w-2xl">
             <p className="mb-3 text-sm font-medium text-stone-500">
-              Thinking landscape
+              사고 지형
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               생각이 머문 영역
@@ -138,7 +138,7 @@ export default function IdeasPage() {
         <Container>
           <div className="mb-8 max-w-2xl">
             <p className="mb-3 text-sm font-medium text-stone-500">
-              Thought lineages
+              사고 계보
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               몇 달 뒤 다른 분야에서 다시 나타난 생각들
@@ -164,11 +164,11 @@ export default function IdeasPage() {
                   className="grid gap-5 rounded-lg border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[180px_1fr]"
                 >
                   <div>
-                    <p className="font-mono text-xs text-amber-400">
+                    <p className="font-mono text-xs text-stone-500">
                       {String(index + 1).padStart(2, "0")} · {lineage.id}
                     </p>
                     <p className="mt-2 text-xs text-zinc-600">
-                      {lineage.entryIds.length} connected entries
+                      연결 항목 {lineage.entryIds.length}개
                     </p>
                   </div>
                   <div>
@@ -220,11 +220,11 @@ export default function IdeasPage() {
                       className="grid gap-5 rounded-lg border border-white/10 bg-zinc-900/25 p-5 lg:grid-cols-[180px_1fr] lg:p-6"
                     >
                       <div>
-                        <p className="font-mono text-xs text-amber-400">
+                        <p className="font-mono text-xs text-stone-500">
                           {String(index + 1).padStart(2, "0")} · {lineage.id}
                         </p>
                         <p className="mt-2 text-xs text-zinc-600">
-                          {lineage.entryIds.length} connected entries
+                          연결 항목 {lineage.entryIds.length}개
                         </p>
                       </div>
                       <div>
@@ -258,7 +258,7 @@ export default function IdeasPage() {
         <Container>
           <div className="mb-8 max-w-2xl">
             <p className="mb-3 text-sm font-medium text-stone-500">
-              Change over time
+              시간에 따른 변화
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               한 번의 성향 진단이 아니라 시간에 따른 기록
@@ -281,7 +281,7 @@ export default function IdeasPage() {
                 <div className="mb-5 flex items-end justify-between">
                   <h3 className="text-3xl font-semibold text-zinc-100">{year}</h3>
                   <p className="font-mono text-sm text-zinc-600">
-                    {count} first-seen entries
+                    처음 등장 {count}개
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -305,7 +305,7 @@ export default function IdeasPage() {
         <Container>
           <div className="mb-8 max-w-3xl">
             <p className="mb-3 text-sm font-medium text-stone-500">
-              Evidence archive
+              근거 아카이브
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
               202개의 실제 사고 단위
@@ -324,14 +324,14 @@ export default function IdeasPage() {
         <Container>
           <div className="max-w-3xl rounded-lg border border-white/10 bg-zinc-900/25 p-6">
             <p className="mb-2 text-sm font-medium text-stone-500">
-              Method & privacy
+              방법·개인정보
             </p>
             <p className="text-sm leading-6 text-zinc-400">
               {thinking.method.summary} {thinking.method.privacy}{" "}
               {thinking.method.review}
             </p>
             <p className="mt-4 font-mono text-xs text-zinc-600">
-              export cutoff · {thinking.exportCutoff}
+              내보내기 기준 · {thinking.exportCutoff}
             </p>
           </div>
         </Container>
