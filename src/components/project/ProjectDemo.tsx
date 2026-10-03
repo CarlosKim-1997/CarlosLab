@@ -46,7 +46,7 @@ export function ProjectDemo({ demo, links }: ProjectDemoProps) {
   return (
     <section className="space-y-4">
       <div className="flex items-center justify-between gap-4">
-        <h2 className="text-sm font-mono uppercase tracking-widest text-cyan-400">
+        <h2 className="text-base font-semibold text-stone-300">
           {links.download ? "다운로드" : "데모"}
         </h2>
         <div className="flex flex-wrap gap-2">

@@ -6,14 +6,14 @@ export function PortfolioPreviewSection() {
   return (
     <section
       id="portfolio"
-      className="border-b border-white/10 bg-gradient-to-b from-violet-950/20 via-transparent to-transparent py-14 sm:py-16"
+      className="border-b border-violet-500/15 bg-zinc-950/40 py-14 sm:py-16"
       aria-labelledby="portfolio-heading"
     >
       <Container className="space-y-10">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
           <div className="max-w-xl space-y-5">
-            <p className="font-mono text-sm uppercase tracking-[0.25em] text-violet-300">
-              Portfolio · Preview
+            <p className="text-sm font-medium text-violet-300/95">
+              Portfolio · preview
             </p>
             <div>
               <h2
@@ -36,7 +36,7 @@ export function PortfolioPreviewSection() {
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-zinc-900/40 p-5 sm:p-6">
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-zinc-500">
+            <h3 className="mb-4 text-sm font-semibold text-stone-400">
               7단계 프로세스 (요약)
             </h3>
             <ol className="grid gap-2 sm:grid-cols-2">
@@ -61,7 +61,7 @@ export function PortfolioPreviewSection() {
         </div>
 
         <div className="space-y-4">
-          <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+          <h3 className="text-sm font-semibold text-stone-400">
             대표 케이스 (PDF 목차)
           </h3>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

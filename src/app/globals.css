@@ -7,15 +7,25 @@
 @source "./**/*.{ts,tsx}";
 
 :root {
-  --background: #070b12;
-  --foreground: #e4e4e7;
-  --surface: #111827;
-  --accent: #22d3ee;
+  --background: #0c0b0a;
+  --foreground: #e7e5e4;
+  --surface: #161514;
+  --surface-raised: #1f1e1c;
+  --border: rgb(255 255 255 / 0.09);
+  --accent-lab: #c9a86c;
+  --accent-lab-hover: #ddbc84;
+  --accent-lab-muted: rgb(201 168 108 / 0.14);
+  --accent-portfolio: #a78bfa;
+  --text-muted: #a8a29e;
+  --text-subtle: #78716c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-lab-accent: var(--accent-lab);
+  --color-lab-accent-hover: var(--accent-lab-hover);
+  --color-lab-accent-muted: var(--accent-lab-muted);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
@@ -28,5 +38,5 @@ body {
 }
 
 ::selection {
-  background: rgb(34 211 238 / 0.3);
+  background: rgb(201 168 108 / 0.28);
 }

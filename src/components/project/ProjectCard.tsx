@@ -16,14 +16,17 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
 
   return (
     <Link href={`/projects/${project.slug}`} className="group block h-full">
-      <Card hover className={`flex h-full flex-col ${featured ? "ring-1 ring-cyan-500/30" : ""}`}>
-        <div className="relative mb-4 aspect-video overflow-hidden rounded-lg border border-white/5">
+      <Card
+        hover
+        className={`flex h-full flex-col ${featured ? "ring-1 ring-lab-accent/35" : ""}`}
+      >
+        <div className="relative mb-4 aspect-video overflow-hidden rounded-md border border-white/5">
           <ProjectCoverImage
             src={project.media.cover}
             alt={`${project.title} 썸네일`}
           />
           {featured && (
-            <span className="absolute left-3 top-3 rounded-full bg-cyan-500/90 px-2 py-0.5 text-xs font-semibold text-zinc-950">
+            <span className="absolute left-3 top-3 rounded-md bg-lab-accent px-2 py-0.5 text-xs font-semibold text-zinc-950">
               추천
             </span>
           )}
@@ -35,11 +38,11 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           <Badge>{project.year}</Badge>
         </div>
 
-        <h3 className="mb-1 text-lg font-semibold text-zinc-100 group-hover:text-cyan-300">
+        <h3 className="mb-1 text-lg font-semibold text-stone-100 group-hover:text-stone-50">
           {project.title}
         </h3>
-        <p className="mb-3 text-sm text-zinc-500">{project.subtitle}</p>
-        <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">
+        <p className="mb-3 text-sm text-stone-500">{project.subtitle}</p>
+        <p className="mb-4 flex-1 text-sm leading-relaxed text-stone-400">
           {project.summary}
         </p>
 
@@ -47,14 +50,14 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           {project.stack.slice(0, 4).map((tech) => (
             <span
               key={tech}
-              className="rounded bg-zinc-800/80 px-2 py-0.5 text-xs text-zinc-400"
+              className="rounded bg-zinc-800/80 px-2 py-0.5 text-xs text-stone-400"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        <span className="text-sm font-medium text-cyan-400 group-hover:text-cyan-300">
+        <span className="text-sm font-medium text-stone-400 group-hover:text-lab-accent">
           {playable
             ? "체험하기 →"
             : project.links.download

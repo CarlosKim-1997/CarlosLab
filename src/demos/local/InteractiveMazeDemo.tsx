@@ -125,21 +125,21 @@ export function InteractiveMazeDemo() {
         <button
           type="button"
           onClick={() => setMode("wall")}
-          className={`rounded px-3 py-1 text-xs ${mode === "wall" ? "bg-cyan-500 text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}
+          className={`rounded px-3 py-1 text-xs ${mode === "wall" ? "bg-lab-accent text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}
         >
           벽 그리기
         </button>
         <button
           type="button"
           onClick={() => setMode("erase")}
-          className={`rounded px-3 py-1 text-xs ${mode === "erase" ? "bg-cyan-500 text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}
+          className={`rounded px-3 py-1 text-xs ${mode === "erase" ? "bg-lab-accent text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}
         >
           지우기
         </button>
         <button
           type="button"
           onClick={solve}
-          className="rounded bg-emerald-500 px-3 py-1 text-xs text-zinc-950"
+          className="rounded bg-stone-300 px-3 py-1 text-xs text-zinc-950"
         >
           BFS 실행
         </button>

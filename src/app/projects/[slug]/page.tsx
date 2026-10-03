@@ -49,7 +49,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         <ProjectMetaPanel project={project} />
 
         <div>
-          <h2 className="mb-3 text-xs font-mono uppercase tracking-widest text-zinc-500">
+          <h2 className="mb-3 text-sm font-semibold text-stone-500">
             기술 스택
           </h2>
           <ProjectStack stack={project.stack} />

@@ -41,7 +41,7 @@ export default function IdeasPage() {
     <>
       <section className="border-b border-white/10 py-16 sm:py-24">
         <Container>
-          <p className="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-violet-400">
+          <p className="mb-4 text-sm font-medium text-stone-500">
             Thinking Map · {thinking.snapshot}
           </p>
           <h1 className="mb-6 max-w-4xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
@@ -66,7 +66,7 @@ export default function IdeasPage() {
                 className="rounded-2xl border border-white/10 bg-zinc-900/35 px-5 py-4"
               >
                 <p className="text-2xl font-semibold text-zinc-100">{value}</p>
-                <p className="mt-1 font-mono text-xs uppercase tracking-wider text-zinc-600">
+                <p className="mt-1 text-xs text-stone-600">
                   {label}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function IdeasPage() {
       <section className="py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
+            <p className="mb-3 text-sm font-medium text-stone-500">
               Recurring patterns
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
@@ -96,7 +96,7 @@ export default function IdeasPage() {
                 key={pattern.id}
                 className="rounded-2xl border border-white/10 bg-zinc-900/25 p-6"
               >
-                <p className="mb-3 font-mono text-xs text-cyan-400">{pattern.id}</p>
+                <p className="mb-3 font-mono text-xs text-stone-500">{pattern.id}</p>
                 <h3 className="mb-3 text-lg font-semibold leading-7 text-zinc-100">
                   {pattern.name}
                 </h3>
@@ -115,7 +115,7 @@ export default function IdeasPage() {
       <section className="border-y border-white/5 bg-zinc-900/20 py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-emerald-400">
+            <p className="mb-3 text-sm font-medium text-stone-500">
               Thinking landscape
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
@@ -137,7 +137,7 @@ export default function IdeasPage() {
       <section className="py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-amber-400">
+            <p className="mb-3 text-sm font-medium text-stone-500">
               Thought lineages
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
@@ -257,7 +257,7 @@ export default function IdeasPage() {
       <section className="border-y border-white/5 bg-zinc-900/20 py-16">
         <Container>
           <div className="mb-8 max-w-2xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-violet-400">
+            <p className="mb-3 text-sm font-medium text-stone-500">
               Change over time
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
@@ -304,7 +304,7 @@ export default function IdeasPage() {
       <section className="py-16">
         <Container>
           <div className="mb-8 max-w-3xl">
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
+            <p className="mb-3 text-sm font-medium text-stone-500">
               Evidence archive
             </p>
             <h2 className="mb-3 text-3xl font-bold text-zinc-50">
@@ -323,7 +323,7 @@ export default function IdeasPage() {
       <section className="border-t border-white/10 py-12">
         <Container>
           <div className="max-w-3xl rounded-2xl border border-white/10 bg-zinc-900/25 p-6">
-            <p className="mb-2 font-mono text-xs uppercase tracking-wider text-zinc-600">
+            <p className="mb-2 text-sm font-medium text-stone-500">
               Method & privacy
             </p>
             <p className="text-sm leading-6 text-zinc-400">

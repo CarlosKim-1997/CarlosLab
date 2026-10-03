@@ -34,7 +34,7 @@ export function IframeDemo({ demo }: IframeDemoProps) {
           href={iframeSrc}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cyan-400 hover:text-cyan-300"
+          className="text-lab-accent hover:text-lab-accent-hover"
         >
           새 탭에서 열기 →
         </a>

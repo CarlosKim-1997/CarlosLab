@@ -4,7 +4,7 @@ import type { ProjectMeta } from "@/lib/project/types";
 const SITE_NAME = "Carlos Lab";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const DEFAULT_DESCRIPTION =
-  "개인 프로젝트 모음. 브라우저에서 바로 돌려 볼 수 있는 데모 포함.";
+  "만든 도구와 실험을 모아 둔 작업실. 설명과 함께, 되는 것은 브라우저에서 바로 확인할 수 있습니다.";
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
