@@ -28,7 +28,7 @@ const meta = {
   },
   media: {
     cover: "/media/projects/bobkinator/cover.svg",
-    og: "/media/projects/bobkinator/cover.svg",
+    og: "/media/projects/bobkinator/og.png",
     screenshots: ["/media/projects/bobkinator/cover.svg"],
   },
   visibility: "public",

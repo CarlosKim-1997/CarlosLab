@@ -31,7 +31,7 @@ const meta = {
   },
   media: {
     cover: "/media/projects/ai-workflow-orchestrator/cover.svg",
-    og: "/media/projects/ai-workflow-orchestrator/cover.svg",
+    og: "/media/projects/ai-workflow-orchestrator/og.png",
     screenshots: ["/media/projects/ai-workflow-orchestrator/cover.svg"],
   },
   visibility: "public",

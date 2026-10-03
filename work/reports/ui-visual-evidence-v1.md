@@ -33,3 +33,11 @@ Standard set: `docs/design/ui-constraints.md` (Visual evidence).
 | `ui-01-home-hero.png` | Regression |
 | `ui-02-home-portfolio.png` | Regression |
 | `ui-03-ideas-korean.png` | `/ideas` 한글 섹션 라벨 + 도넛 |
+
+## Phase 5 — nav, OG PNG, deploy checks
+
+| Artifact | Description |
+|----------|-------------|
+| `ui-01-home-hero.png` | Regression |
+| `ui-02-home-portfolio.png` | Regression |
+| `ui-03-nav-sago-jido.png` | Header nav `사고 지도` + `/ideas` |

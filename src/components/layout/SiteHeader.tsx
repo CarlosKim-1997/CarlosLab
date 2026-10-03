@@ -4,7 +4,7 @@ import { Container } from "./Container";
 const navItems = [
   { href: "/", label: "홈" },
   { href: "/projects", label: "프로젝트" },
-  { href: "/ideas", label: "아이디어" },
+  { href: "/ideas", label: "사고 지도" },
   { href: "/lab", label: "랩" },
   { href: "/notes", label: "노트" },
   { href: "/about", label: "소개" },
@@ -42,7 +42,7 @@ export function SiteHeader() {
             href="/ideas"
             className="text-sm text-stone-500 transition hover:text-stone-200"
           >
-            아이디어
+            사고 지도
           </Link>
           <Link
             href="/about"

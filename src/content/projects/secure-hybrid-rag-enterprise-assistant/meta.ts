@@ -34,7 +34,7 @@ const meta = {
   },
   media: {
     cover: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.svg",
-    og: "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.svg",
+    og: "/media/projects/secure-hybrid-rag-enterprise-assistant/og.png",
     screenshots: [
       "/media/projects/secure-hybrid-rag-enterprise-assistant/cover.svg",
     ],

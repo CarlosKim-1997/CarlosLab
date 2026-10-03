@@ -31,7 +31,7 @@ const meta = {
   },
   media: {
     cover: "/media/projects/calmmail/cover.svg",
-    og: "/media/projects/calmmail/cover.svg",
+    og: "/media/projects/calmmail/og.png",
     screenshots: ["/media/projects/calmmail/cover.svg"],
   },
   visibility: "public",

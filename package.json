@@ -14,7 +14,9 @@
     "create:project": "tsx scripts/create-project.ts",
     "sync:deploys": "tsx scripts/sync-deploys.ts",
     "validate:governance": "node tooling/governance/check.mjs",
-    "verify:thinking-map": "npm run validate:governance && npm run validate:thinking && npm run build"
+    "verify:thinking-map": "npm run validate:governance && npm run validate:thinking && npm run build",
+    "generate:og-images": "tsx scripts/generate-og-images.ts",
+    "check:public-assets": "tsx scripts/check-public-assets.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
