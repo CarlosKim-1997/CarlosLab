@@ -8,6 +8,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   href?: string;
   external?: boolean;
+  /** When set with `href`, suggests a filename for same-origin downloads. */
+  download?: string;
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -26,6 +28,7 @@ export function Button({
   variant = "primary",
   href,
   external,
+  download,
   className = "",
   ...props
 }: ButtonProps) {
@@ -40,6 +43,13 @@ export function Button({
           rel="noopener noreferrer"
           className={classes}
         >
+          {children}
+        </a>
+      );
+    }
+    if (download) {
+      return (
+        <a href={href} download={download} className={classes}>
           {children}
         </a>
       );

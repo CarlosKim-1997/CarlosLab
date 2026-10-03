@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { PortfolioPreviewSection } from "@/components/portfolio/PortfolioPreviewSection";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import { Button } from "@/components/ui/Button";
 import {
@@ -26,10 +27,14 @@ export default function HomePage() {
           </h1>
           <p className="mb-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
             Streamlit PoC, 데스크톱 앱, 모바일 앱, RAG 실험 등. README만
-            읽히는 게 아니라, 되는 것은 여기서 직접 돌려 봅니다.
+            읽히는 게 아니라, 되는 것은 여기서 직접 돌려 봅니다. Lab 전체를
+            보기 전에 요약·해설이 필요하면 아래 PDF 프리뷰부터 보셔도 됩니다.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button href="/projects">프로젝트 둘러보기</Button>
+            <Button href="#portfolio" variant="secondary">
+              포트폴리오 PDF
+            </Button>
             <Button href="/ideas" variant="secondary">
               사고 지도
             </Button>
@@ -39,6 +44,8 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      <PortfolioPreviewSection />
 
       <section className="py-14">
         <Container className="space-y-6">
