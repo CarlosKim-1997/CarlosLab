@@ -9,7 +9,7 @@ export const projectStatusLabels: Record<ProjectStatus, string> = {
 
 export const projectKindLabels: Record<ProjectKind, string> = {
   web: "웹",
-  ai: "AI",
+  ai: "자동화",
   tool: "도구",
   game: "게임",
   visual: "비주얼",

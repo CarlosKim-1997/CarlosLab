@@ -18,7 +18,7 @@ export const PORTFOLIO_CASES = [
   {
     id: "01",
     title: "ReDiscovery",
-    summary: "LLM semantic Judge가 있는 이론 재발견 데일리 웹게임",
+    summary: "의미 기반 판정(Judge)이 있는 이론 재발견 데일리 웹게임",
   },
   {
     id: "02",
@@ -28,7 +28,7 @@ export const PORTFOLIO_CASES = [
   {
     id: "03",
     title: "Repository-Governance",
-    summary: "에이전트가 바뀌어도 일관된 repo 관리",
+    summary: "작업 주체가 바뀌어도 일관된 repo 관리",
   },
   {
     id: "04",

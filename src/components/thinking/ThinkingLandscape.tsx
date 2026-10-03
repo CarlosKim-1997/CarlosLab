@@ -15,7 +15,7 @@ export function ThinkingLandscape({
   let consumed = 0;
 
   return (
-    <div className="grid gap-8 rounded-3xl border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[320px_1fr] lg:p-8">
+    <div className="grid gap-8 rounded-lg border border-white/10 bg-zinc-900/25 p-6 lg:grid-cols-[320px_1fr] lg:p-8">
       <div className="flex items-center justify-center">
         <div className="relative h-[280px] w-[280px]">
           <svg
@@ -62,9 +62,7 @@ export function ThinkingLandscape({
             <p className="text-4xl font-semibold tracking-tight text-zinc-50">
               {total}
             </p>
-            <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-zinc-500">
-              public units
-            </p>
+            <p className="mt-1 text-xs text-stone-500">공개 사고 단위</p>
           </div>
         </div>
       </div>
@@ -76,7 +74,7 @@ export function ThinkingLandscape({
           return (
             <div
               key={domain}
-              className="flex items-center gap-3 rounded-xl border border-white/5 bg-black/10 px-3 py-3"
+              className="flex items-center gap-3 rounded-md border border-white/5 bg-black/10 px-3 py-3"
             >
               <span
                 aria-hidden="true"

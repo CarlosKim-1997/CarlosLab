@@ -1,9 +1,19 @@
-# UI visual evidence — baseline (Dark Ink + portfolio home)
+# UI visual evidence
 
-Captured after de-AI chrome and portfolio PDF home work. Standard set defined in `docs/design/ui-constraints.md`.
+Standard set: `docs/design/ui-constraints.md` (Visual evidence).
+
+## Baseline — Dark Ink + portfolio home
 
 | Artifact | Description |
 |----------|-------------|
-| `/opt/cursor/artifacts/ui-01-home-hero.png` | Home hero: stone Lab chrome, violet PDF link |
-| `/opt/cursor/artifacts/ui-02-home-portfolio.png` | Home `#portfolio` preview section |
-| `/opt/cursor/artifacts/ui-03-projects.png` | Projects list and cards |
+| `ui-01-home-hero.png` | Home hero |
+| `ui-02-home-portfolio.png` | Home `#portfolio` |
+| `ui-03-projects.png` | Projects list |
+
+## Phase 2 — project copy + Thinking Map palette
+
+| Artifact | Description |
+|----------|-------------|
+| `ui-01-home-hero.png` | Unchanged hero (regression) |
+| `ui-02-home-portfolio.png` | Portfolio case card copy tweak |
+| `ui-03-ideas-landscape.png` | `/ideas` domain donut (muted palette) |

@@ -99,10 +99,10 @@ export function LineageMap({
     .filter(({ value }) => value >= min && value <= max);
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-zinc-900/25 p-4 sm:p-6">
+    <div className="rounded-lg border border-white/10 bg-zinc-900/25 p-4 sm:p-6">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-amber-300">
+          <p className="text-sm font-medium text-stone-500">
             first-seen chronology
           </p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500">
