@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { PortfolioPdfLink } from "@/components/portfolio/PortfolioPdfLink";
 import { PortfolioPreviewSection } from "@/components/portfolio/PortfolioPreviewSection";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import { Button } from "@/components/ui/Button";
@@ -22,25 +23,33 @@ export default function HomePage() {
           <p className="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-cyan-400">
             Carlos Lab
           </p>
-          <h1 className="mb-6 max-w-3xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
+          <h1 className="mb-4 max-w-3xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
             만든 것들을 모아 두고, 브라우저에서 바로 써 볼 수 있게.
           </h1>
+          <div className="mb-6">
+            <PortfolioPdfLink variant="hero" />
+          </div>
           <p className="mb-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
             Streamlit PoC, 데스크톱 앱, 모바일 앱, RAG 실험 등. README만
-            읽히는 게 아니라, 되는 것은 여기서 직접 돌려 봅니다. Lab 전체를
-            보기 전에 요약·해설이 필요하면 아래 PDF 프리뷰부터 보셔도 됩니다.
+            읽히는 게 아니라, 되는 것은 여기서 직접 돌려 봅니다.{" "}
+            <Link
+              href="#portfolio"
+              className="text-zinc-500 underline decoration-zinc-600 underline-offset-2 transition hover:text-zinc-300"
+            >
+              PDF 아래 해설
+            </Link>
+            에서 요약·케이스도 볼 수 있습니다.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
             <Button href="/projects">프로젝트 둘러보기</Button>
-            <Button href="#portfolio" variant="secondary">
-              포트폴리오 PDF
-            </Button>
-            <Button href="/ideas" variant="secondary">
-              사고 지도
-            </Button>
-            <Button href="/about" variant="secondary">
-              소개
-            </Button>
+            <span className="flex flex-wrap gap-x-4 text-sm text-zinc-500">
+              <Link href="/ideas" className="hover:text-zinc-300">
+                사고 지도
+              </Link>
+              <Link href="/about" className="hover:text-zinc-300">
+                소개
+              </Link>
+            </span>
           </div>
         </Container>
       </section>

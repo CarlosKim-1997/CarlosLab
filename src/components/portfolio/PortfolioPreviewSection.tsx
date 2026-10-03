@@ -1,11 +1,6 @@
 import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
-import {
-  PORTFOLIO_CASES,
-  PORTFOLIO_DOWNLOAD_FILENAME,
-  PORTFOLIO_PDF_HREF,
-  PORTFOLIO_STAGES,
-} from "@/lib/portfolio/constants";
+import { PortfolioPdfLink } from "@/components/portfolio/PortfolioPdfLink";
+import { PORTFOLIO_CASES, PORTFOLIO_STAGES } from "@/lib/portfolio/constants";
 
 export function PortfolioPreviewSection() {
   return (
@@ -34,13 +29,8 @@ export function PortfolioPreviewSection() {
               케이스·기술 폭을 PDF 한 권으로 정리해 두었습니다. 아래는 그
               내용의 짧은 해설이고, 자세한 서사와 증거는 PDF에서 이어집니다.
             </p>
-            <div className="flex flex-wrap items-center gap-3 pt-1">
-              <Button
-                href={PORTFOLIO_PDF_HREF}
-                download={PORTFOLIO_DOWNLOAD_FILENAME}
-              >
-                포트폴리오 PDF 다운로드
-              </Button>
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 pt-1">
+              <PortfolioPdfLink />
               <span className="text-sm text-zinc-500">9페이지 · 약 580KB</span>
             </div>
           </div>
